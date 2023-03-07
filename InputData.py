@@ -38,13 +38,11 @@ Total = agedf['total'].values[0]
 
 age5ydf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Age_5yrs.csv'))
 age5ydf = age5ydf[age5ydf['geography code'] == 'E02005949']
-
 sexdf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Sex.csv'))
 sexdf = sexdf[sexdf['geography code'] == 'E02005949']
-
-ethnicdf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Ethnic.csv'))
-ethnicdf = ethnicdf[ethnicdf['geography code'] == 'E02005949']
-ethnicdf = ethnicdf.drop(columns=[col for col in ethnicdf.columns if '0' in col]) #remove all category columns
-
-religiondf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Religion.csv'))
-religiondf = religiondf[religiondf['geography code'] == 'E02005949']
+# ethnicdf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Ethnic.csv'))
+# ethnicdf = ethnicdf[ethnicdf['geography code'] == 'E02005949']
+# ethnicdf = ethnicdf.drop(columns=[col for col in ethnicdf.columns if '0' in col]) #remove all category columns
+#
+# religiondf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Religion.csv'))
+# religiondf = religiondf[religiondf['geography code'] == 'E02005949']

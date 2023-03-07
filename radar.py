@@ -5,12 +5,9 @@ from math import pi
 
 # Set data
 df = pd.DataFrame({
-    'group': ['A', 'B', 'C', 'D'],
-    'var1': [38, 1.5, 30, 4],
-    'var2': [29, 10, 9, 34],
-    'var3': [8, 39, 23, 24],
-    'var4': [7, 31, 33, 14],
-    'var5': [28, 15, 32, 14]
+    'group': ['A', 'B', 'C', 'D', 'E'],
+    'A': [10,10,10,10,10],
+    'B': [12,15,30,20,40]
 })
 
 # number of variable
