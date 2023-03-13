@@ -17,68 +17,121 @@ import plotly.express as px
 class Individual:
     def __init__(self):
         self.genelength = ID.Total;
+        self.keys = ['M 0-4 C', 'M 0-4 B', 'M 0-4 H', 'M 0-4 J', 'M 0-4 M', 'M 0-4 S', 'M 0-4 O', 'M 0-4 N', 'M 0-4 NS',
+                     'M 5-7 C', 'M 5-7 B', 'M 5-7 H', 'M 5-7 J', 'M 5-7 M', 'M 5-7 S', 'M 5-7 O', 'M 5-7 N', 'M 5-7 NS',
+                     'M 8-9 C', 'M 8-9 B', 'M 8-9 H', 'M 8-9 J', 'M 8-9 M', 'M 8-9 S', 'M 8-9 O', 'M 8-9 N', 'M 8-9 NS',
+                     'M 10-14 C', 'M 10-14 B', 'M 10-14 H', 'M 10-14 J', 'M 10-14 M', 'M 10-14 S', 'M 10-14 O',
+                     'M 10-14 N', 'M 10-14 NS', 'M 15 C', 'M 15 B', 'M 15 H', 'M 15 J', 'M 15 M', 'M 15 S', 'M 15 O',
+                     'M 15 N', 'M 15 NS', 'M 16-17 C', 'M 16-17 B', 'M 16-17 H', 'M 16-17 J', 'M 16-17 M', 'M 16-17 S',
+                     'M 16-17 O', 'M 16-17 N', 'M 16-17 NS', 'M 18-19 C', 'M 18-19 B', 'M 18-19 H', 'M 18-19 J',
+                     'M 18-19 M', 'M 18-19 S', 'M 18-19 O', 'M 18-19 N', 'M 18-19 NS', 'M 20-24 C', 'M 20-24 B',
+                     'M 20-24 H', 'M 20-24 J', 'M 20-24 M', 'M 20-24 S', 'M 20-24 O', 'M 20-24 N', 'M 20-24 NS',
+                     'M 25-29 C', 'M 25-29 B', 'M 25-29 H', 'M 25-29 J', 'M 25-29 M', 'M 25-29 S', 'M 25-29 O',
+                     'M 25-29 N', 'M 25-29 NS', 'M 30-34 C', 'M 30-34 B', 'M 30-34 H', 'M 30-34 J', 'M 30-34 M',
+                     'M 30-34 S', 'M 30-34 O', 'M 30-34 N', 'M 30-34 NS', 'M 35-39 C', 'M 35-39 B', 'M 35-39 H',
+                     'M 35-39 J', 'M 35-39 M', 'M 35-39 S', 'M 35-39 O', 'M 35-39 N', 'M 35-39 NS', 'M 40-44 C',
+                     'M 40-44 B', 'M 40-44 H', 'M 40-44 J', 'M 40-44 M', 'M 40-44 S', 'M 40-44 O', 'M 40-44 N',
+                     'M 40-44 NS', 'M 45-49 C', 'M 45-49 B', 'M 45-49 H', 'M 45-49 J', 'M 45-49 M', 'M 45-49 S',
+                     'M 45-49 O', 'M 45-49 N', 'M 45-49 NS', 'M 50-54 C', 'M 50-54 B', 'M 50-54 H', 'M 50-54 J',
+                     'M 50-54 M', 'M 50-54 S', 'M 50-54 O', 'M 50-54 N', 'M 50-54 NS', 'M 55-59 C', 'M 55-59 B',
+                     'M 55-59 H', 'M 55-59 J', 'M 55-59 M', 'M 55-59 S', 'M 55-59 O', 'M 55-59 N', 'M 55-59 NS',
+                     'M 60-64 C', 'M 60-64 B', 'M 60-64 H', 'M 60-64 J', 'M 60-64 M', 'M 60-64 S', 'M 60-64 O',
+                     'M 60-64 N', 'M 60-64 NS', 'M 65-69 C', 'M 65-69 B', 'M 65-69 H', 'M 65-69 J', 'M 65-69 M',
+                     'M 65-69 S', 'M 65-69 O', 'M 65-69 N', 'M 65-69 NS', 'M 70-74 C', 'M 70-74 B', 'M 70-74 H',
+                     'M 70-74 J', 'M 70-74 M', 'M 70-74 S', 'M 70-74 O', 'M 70-74 N', 'M 70-74 NS', 'M 75-79 C',
+                     'M 75-79 B', 'M 75-79 H', 'M 75-79 J', 'M 75-79 M', 'M 75-79 S', 'M 75-79 O', 'M 75-79 N',
+                     'M 75-79 NS', 'M 80-84 C', 'M 80-84 B', 'M 80-84 H', 'M 80-84 J', 'M 80-84 M', 'M 80-84 S',
+                     'M 80-84 O', 'M 80-84 N', 'M 80-84 NS', 'M 85+ C', 'M 85+ B', 'M 85+ H', 'M 85+ J', 'M 85+ M',
+                     'M 85+ S', 'M 85+ O', 'M 85+ N', 'M 85+ NS', 'F 0-4 C', 'F 0-4 B', 'F 0-4 H', 'F 0-4 J', 'F 0-4 M',
+                     'F 0-4 S', 'F 0-4 O', 'F 0-4 N', 'F 0-4 NS', 'F 5-7 C', 'F 5-7 B', 'F 5-7 H', 'F 5-7 J', 'F 5-7 M',
+                     'F 5-7 S', 'F 5-7 O', 'F 5-7 N', 'F 5-7 NS', 'F 8-9 C', 'F 8-9 B', 'F 8-9 H', 'F 8-9 J', 'F 8-9 M',
+                     'F 8-9 S', 'F 8-9 O', 'F 8-9 N', 'F 8-9 NS', 'F 10-14 C', 'F 10-14 B', 'F 10-14 H', 'F 10-14 J',
+                     'F 10-14 M', 'F 10-14 S', 'F 10-14 O', 'F 10-14 N', 'F 10-14 NS', 'F 15 C', 'F 15 B', 'F 15 H',
+                     'F 15 J', 'F 15 M', 'F 15 S', 'F 15 O', 'F 15 N', 'F 15 NS', 'F 16-17 C', 'F 16-17 B', 'F 16-17 H',
+                     'F 16-17 J', 'F 16-17 M', 'F 16-17 S', 'F 16-17 O', 'F 16-17 N', 'F 16-17 NS', 'F 18-19 C',
+                     'F 18-19 B', 'F 18-19 H', 'F 18-19 J', 'F 18-19 M', 'F 18-19 S', 'F 18-19 O', 'F 18-19 N',
+                     'F 18-19 NS', 'F 20-24 C', 'F 20-24 B', 'F 20-24 H', 'F 20-24 J', 'F 20-24 M', 'F 20-24 S',
+                     'F 20-24 O', 'F 20-24 N', 'F 20-24 NS', 'F 25-29 C', 'F 25-29 B', 'F 25-29 H', 'F 25-29 J',
+                     'F 25-29 M', 'F 25-29 S', 'F 25-29 O', 'F 25-29 N', 'F 25-29 NS', 'F 30-34 C', 'F 30-34 B',
+                     'F 30-34 H', 'F 30-34 J', 'F 30-34 M', 'F 30-34 S', 'F 30-34 O', 'F 30-34 N', 'F 30-34 NS',
+                     'F 35-39 C', 'F 35-39 B', 'F 35-39 H', 'F 35-39 J', 'F 35-39 M', 'F 35-39 S', 'F 35-39 O',
+                     'F 35-39 N', 'F 35-39 NS', 'F 40-44 C', 'F 40-44 B', 'F 40-44 H', 'F 40-44 J', 'F 40-44 M',
+                     'F 40-44 S', 'F 40-44 O', 'F 40-44 N', 'F 40-44 NS', 'F 45-49 C', 'F 45-49 B', 'F 45-49 H',
+                     'F 45-49 J', 'F 45-49 M', 'F 45-49 S', 'F 45-49 O', 'F 45-49 N', 'F 45-49 NS', 'F 50-54 C',
+                     'F 50-54 B', 'F 50-54 H', 'F 50-54 J', 'F 50-54 M', 'F 50-54 S', 'F 50-54 O', 'F 50-54 N',
+                     'F 50-54 NS', 'F 55-59 C', 'F 55-59 B', 'F 55-59 H', 'F 55-59 J', 'F 55-59 M', 'F 55-59 S',
+                     'F 55-59 O', 'F 55-59 N', 'F 55-59 NS', 'F 60-64 C', 'F 60-64 B', 'F 60-64 H', 'F 60-64 J',
+                     'F 60-64 M', 'F 60-64 S', 'F 60-64 O', 'F 60-64 N', 'F 60-64 NS', 'F 65-69 C', 'F 65-69 B',
+                     'F 65-69 H', 'F 65-69 J', 'F 65-69 M', 'F 65-69 S', 'F 65-69 O', 'F 65-69 N', 'F 65-69 NS',
+                     'F 70-74 C', 'F 70-74 B', 'F 70-74 H', 'F 70-74 J', 'F 70-74 M', 'F 70-74 S', 'F 70-74 O',
+                     'F 70-74 N', 'F 70-74 NS', 'F 75-79 C', 'F 75-79 B', 'F 75-79 H', 'F 75-79 J', 'F 75-79 M',
+                     'F 75-79 S', 'F 75-79 O', 'F 75-79 N', 'F 75-79 NS', 'F 80-84 C', 'F 80-84 B', 'F 80-84 H',
+                     'F 80-84 J', 'F 80-84 M', 'F 80-84 S', 'F 80-84 O', 'F 80-84 N', 'F 80-84 NS', 'F 85+ C',
+                     'F 85+ B', 'F 85+ H', 'F 85+ J', 'F 85+ M', 'F 85+ S', 'F 85+ O', 'F 85+ N', 'F 85+ NS']
         self.genes = self.generateAll();
         self.fitness = self.getFitness();
+
 
     def generate(self, id):
         # age_samples = ID.get_weighted_samples(ID.age5ydf, self.genelength)
         # sex_samples = ID.get_weighted_samples(ID.sexdf, self.genelength)
-        ages = ['0-4', ' 5-7', ' 8-9', ' 10-14', '15', ' 16-17', ' 18-19', ' 20-24', ' 25-29', ' 30-34', ' 35-39', ' 40-44', ' 45-49', ' 50-54', ' 55-59', ' 60-64', ' 65-69', ' 70-74', ' 75-79', ' 80-84', ' 85+']
-        sexes = ['M', 'F']
-        age = random.sample(ages, 1)[0]
-        sex = random.sample(sexes, 1)[0]
-        ethnicity = 'W1'
-        religion = 'C'
+        rnd = random.randrange(0, self.genelength)
+        age= ID.get_weighted_samples(ID.age5ydf, self.genelength)[rnd]
+        sex = ID.get_weighted_samples(ID.sexdf, self.genelength)[rnd]
+        ethnicity = ID.get_weighted_samples(ID.ethnicdf, self.genelength)[rnd]
+        religion = ID.get_weighted_samples(ID.religiondf, self.genelength)[rnd]
         return Person(id, age=age, sex=sex, ethnicity=ethnicity, religion=religion)
     def generateAll(self):
         age_samples = ID.get_weighted_samples(ID.age5ydf, self.genelength)
         sex_samples = ID.get_weighted_samples(ID.sexdf, self.genelength)
-
-        # ages = ['0-4', '5-7', '8-9', '10-14', '15', '16-17', '18-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65-69', '70-74', '75-79', '80-84', '85+']
-        # sexes = ['M', 'F']
+        eth_samples = ID.get_weighted_samples(ID.ethnicdf, self.genelength)
+        rel_samples = ID.get_weighted_samples(ID.religiondf, self.genelength)
 
         persons = []
         for i in range(0, self.genelength):
-            # age = random.sample(ages, 1)[0]
-            # sex = random.sample(sexes, 1)[0]
             age = age_samples[i]
             sex = sex_samples[i]
-            ethnicity = 'W1'
-            religion = 'C'
+            ethnicity = eth_samples[i]
+            religion = rel_samples[i]
             person = Person(i + 1, age=age, sex=sex, ethnicity=ethnicity, religion=religion)
             persons.append(person)
         return persons
 
-    def getFitness(self):
+    def getactual(self):
+        actual_sex_by_age_by_religion = ICT.get_dictionary(ICT.religion_by_sex_by_age)
+        actual = []
+        for key in self.keys:
+            avalue = actual_sex_by_age_by_religion.get(key)
+            actual.append(avalue)
+        return actual
+
+    def getpredicted(self):
         temp = []
         for gene in self.genes:
-            temp.append(gene.age + " " + gene.sex)
+            temp.append(gene.sex + " " + gene.age + " " + gene.religion)
 
-        predicted_sex_by_age_5yrs = Counter(temp)
-        actual_sex_by_age_5yrs = ICT.get_dictionary(ICT.sex_by_age_5yrs)
-
+        predicted_sex_by_age_by_religion = Counter(temp)
         predicted = []
-        actual = []
-
-        keys = ['0-4 M', '0-4 F', '5-7 M', '5-7 F', '8-9 M', '8-9 F', '10-14 M', '10-14 F', '15 M', '15 F', '16-17 M', '16-17 F', '18-19 M', '18-19 F', '20-24 M', '20-24 F', '25-29 M', '25-29 F', '30-34 M', '30-34 F', '35-39 M', '35-39 F', '40-44 M', '40-44 F', '45-49 M', '45-49 F', '50-54 M', '50-54 F', '55-59 M', '55-59 F', '60-64 M', '60-64 F', '65-69 M', '65-69 F', '70-74 M', '70-74 F', '75-79 M', '75-79 F', '80-84 M', '80-84 F', '85+ M', '85+ F']
-
-        for key in keys:
-            avalue = actual_sex_by_age_5yrs.get(key)
-            pvalue = predicted_sex_by_age_5yrs.get(key)
+        for key in self.keys:
+            pvalue = predicted_sex_by_age_by_religion.get(key)
             if pvalue==None:
                 pvalue=0
-
-            actual.append(avalue)
             predicted.append(pvalue)
+        return predicted
 
-        return self.MAPE(actual, predicted)
+    def getFitness(self):
+        return self.RMSE(self.getactual(), self.getpredicted())
 
     def setFitness(self):
         self.fitness = self.getFitness()
 
+    def RMSE(self, actual, predicted):
+        actual, predicted = np.array(actual), np.array(predicted)
+        rmse = np.sqrt(((predicted - actual) ** 2).mean())
+        return rmse
+
     def MAPE(self, actual, predicted):
-        actual = np.array(actual)
-        predicted = np.array(predicted)
+        actual, predicted = np.array(actual), np.array(predicted)
         mape = np.mean(np.abs((actual - predicted) / actual)) * 100
         return mape
 
@@ -95,47 +148,26 @@ class Individual:
         self.genes[index] = value;
 
     def randomize(self, gene_index):
-        gene = self.generate(gene_index)
+        rnd = random.randrange(0, self.genelength)
+        temp = self.genes[gene_index]
+        self.genes[gene_index] = self.genes[rnd]
+        self.genes[rnd] = temp
 
-    def summary(self):
-        temp = []
-        for gene in self.genes:
-            temp.append(gene.age + " " + gene.sex)
 
-        predicted_sex_by_age_5yrs = Counter(temp)
-        predicted = []
 
-        keys = ['0-4 M', '0-4 F', '5-7 M', '5-7 F', '8-9 M', '8-9 F', '10-14 M', '10-14 F', '15 M', '15 F', '16-17 M',
-                '16-17 F', '18-19 M', '18-19 F', '20-24 M', '20-24 F', '25-29 M', '25-29 F', '30-34 M', '30-34 F',
-                '35-39 M', '35-39 F', '40-44 M', '40-44 F', '45-49 M', '45-49 F', '50-54 M', '50-54 F', '55-59 M',
-                '55-59 F', '60-64 M', '60-64 F', '65-69 M', '65-69 F', '70-74 M', '70-74 F', '75-79 M', '75-79 F',
-                '80-84 M', '80-84 F', '85+ M', '85+ F']
-
-        for key in keys:
-            pvalue = predicted_sex_by_age_5yrs.get(key)
-            if pvalue == None:
-                pvalue = 0
-
-            print(key, pvalue)
     def plot(self):
         temp = []
         for gene in self.genes:
-            temp.append(gene.age + " " + gene.sex)
+            temp.append(gene.sex + " " + gene.age + " " + gene.religion)
+        predicted_sex_by_age_by_religion = Counter(temp)
+        actual_sex_by_age_by_religion = ICT.get_dictionary(ICT.religion_by_sex_by_age)
 
-        predicted_sex_by_age_5yrs = Counter(temp)
-        actual_sex_by_age_5yrs = ICT.get_dictionary(ICT.sex_by_age_5yrs)
-
+        predicted = []
+        actual = []
         plot = []
-
-        keys = ['0-4 M', '0-4 F', '5-7 M', '5-7 F', '8-9 M', '8-9 F', '10-14 M', '10-14 F', '15 M', '15 F', '16-17 M',
-                '16-17 F', '18-19 M', '18-19 F', '20-24 M', '20-24 F', '25-29 M', '25-29 F', '30-34 M', '30-34 F',
-                '35-39 M', '35-39 F', '40-44 M', '40-44 F', '45-49 M', '45-49 F', '50-54 M', '50-54 F', '55-59 M',
-                '55-59 F', '60-64 M', '60-64 F', '65-69 M', '65-69 F', '70-74 M', '70-74 F', '75-79 M', '75-79 F',
-                '80-84 M', '80-84 F', '85+ M', '85+ F']
-
-        for key in keys:
-            avalue = actual_sex_by_age_5yrs.get(key)
-            pvalue = predicted_sex_by_age_5yrs.get(key)
+        for key in self.keys:
+            avalue = actual_sex_by_age_by_religion.get(key)
+            pvalue = predicted_sex_by_age_by_religion.get(key)
             if pvalue == None:
                 pvalue = 0
 
@@ -145,11 +177,13 @@ class Individual:
             plot.append(p)
 
         df = pd.DataFrame(plot)
-        fig = px.bar(df, x="key", y="count", color="category", barmode="group")
+        fig = px.bar(df, x="key", y="count", color="category", barmode="group",
+                     width=8000, height=800, title='RMSE='+ str(self.RMSE(self.getactual(), self.getpredicted())))
         py.offline.plot(fig, filename="bar.html")
         fig.show()
 
 # ind = Individual()
-# ind.summary()
+# ind.randomize(1)
+# ind.plot()
 
 

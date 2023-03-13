@@ -16,7 +16,7 @@ class GeneticAlgorithm:
         self.generation_count = 1
 
         while self.population.getFittest().fitness > 0:
-            if self.generation_count>50:
+            if self.generation_count>20:
                 break
             print("Generation: ", str(self.generation_count), " Fitness: ",  str(self.population.getFittest().fitness));
             self.population.getFittest().plot()

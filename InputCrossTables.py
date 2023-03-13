@@ -16,7 +16,7 @@ def get_dictionary(df):
         for index, column in enumerate(df.columns):
             if index==0:
                 continue
-            dic[column] = row[column]
+            dic[column] = int(row[column])
     return dic
 
 path = os.path.join(os.path.dirname(os.getcwd()))
@@ -82,3 +82,6 @@ ethnic_by_sex_by_age = ethnic_by_sex_by_age.drop(columns=[col for col in ethnic_
 religion_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'religion_by_sex_by_age.csv'))
 religion_by_sex_by_age = religion_by_sex_by_age[religion_by_sex_by_age['geography code'] == 'E02005949']
 religion_by_sex_by_age = religion_by_sex_by_age.drop(columns=[col for col in religion_by_sex_by_age.columns if 'A' in col])
+
+# for column in religion_by_sex_by_age.columns:
+#     print(column)
