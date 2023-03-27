@@ -7,22 +7,21 @@ import plotly as py
 class GeneticAlgorithm:
     def __init__(self, popsize):
         self.uniformRate = 0.6;
-        self.mutationRate = 0.5;
+        self.mutationRate = 0.9;
         self.tournamentSize = 25;
         self.elitism = True;
 
         self.popsize = popsize
         self.population = Population(self.popsize, isNew=True)
         self.generation_count = 1
-
+        count=0
         while self.population.getFittest().fitness > 0:
-            if self.generation_count>20:
-                break
             print("Generation: ", str(self.generation_count), " Fitness: ",  str(self.population.getFittest().fitness));
-            self.population.getFittest().plot()
+            if count%5==0:
+                self.population.getFittest().plot()
             self.population = self.evolve()
             self.generation_count+=1
-
+            count+=1
     def evolve(self):
         elitism_offset = 0
         newpopulation = Population(self.population.size, False)
@@ -65,5 +64,6 @@ class GeneticAlgorithm:
             tournament.addIndividual(self.population.getIndividual(randomselection))
         fittest = tournament.getFittest()
         return fittest
+
 
 g = GeneticAlgorithm(popsize=50)

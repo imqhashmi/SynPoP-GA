@@ -1,15 +1,16 @@
 from Individual import Individual
 import numpy as np
-
+import random
 class Population:
     def __init__(self, size, isNew=True):
         self.size = size
         self.individuals = []
         self.genelength = 0
+        randomchance = 0.5
         if isNew==True:
             for i in range(0, self.size):
-               individual = Individual()
-               self.individuals.append(individual)
+                individual = Individual()
+                self.individuals.append(individual)
             self.setGenelength(self.individuals[0].genelength)
 
     def setGenelength(self, length):

@@ -17,7 +17,7 @@ def get_weighted_sample(df):
     # print(sum(weights))
     # get random values based on prob. distribution
     # result = [str(i) for i in list()]
-    return np.random.choice(groups, size=1, replace=True, p=weights).tolist()
+    return np.random.choice(groups, size=1, replace=True, p=weights).tolist()[0]
 
 
 def get_weighted_samples(df, size):
@@ -29,6 +29,16 @@ def get_weighted_samples(df, size):
     # get random values based on prob. distribution
     return np.random.choice(groups, size=size, replace=True, p=weights).tolist()
 
+def get_weighted_samples_by_age_sex(df, age, sex, size):
+    print(df.columns)
+    df = df[[col for col in df.columns if age in col]]
+    df = df[[col for col in df.columns if sex in col]]
+    groups = list(df.columns)
+    values = df.values.flatten().tolist()
+    total = sum(values)
+    weights = [x / total for x in values]
+    return np.random.choice(groups, size=size, replace=True, p=weights).tolist()
+
 
 path = os.path.join(os.path.dirname(os.getcwd()))
 # Read census data
@@ -38,6 +48,7 @@ Total = agedf['total'].values[0]
 
 age5ydf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Age_5yrs.csv'))
 age5ydf = age5ydf[age5ydf['geography code'] == 'E02005949']
+
 sexdf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Sex.csv'))
 sexdf = sexdf[sexdf['geography code'] == 'E02005949']
 
@@ -47,3 +58,8 @@ ethnicdf = ethnicdf.drop(columns=[col for col in ethnicdf.columns if '0' in col]
 
 religiondf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Religion.csv'))
 religiondf = religiondf[religiondf['geography code'] == 'E02005949']
+
+mstatusdf = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'individual', 'Marital.csv'))
+mstatusdf = mstatusdf[mstatusdf['geography code'] == 'E02005949']
+
+
