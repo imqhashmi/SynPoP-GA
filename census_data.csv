@@ -1,0 +1,301 @@
+﻿age,gender,education,income
+0-18,Male,early years,0-10000
+0-18,Male,early years,10000-20000
+0-18,Male,early years,20000-40000
+0-18,Male,early years,40000-60000
+0-18,Male,early years,60000-80000
+0-18,Male,early years,80000-150000
+0-18,Male,primary,0-10000
+0-18,Male,primary,10000-20000
+0-18,Male,primary,20000-40000
+0-18,Male,primary,40000-60000
+0-18,Male,primary,60000-80000
+0-18,Male,primary,80000-150000
+0-18,Male,secondary,0-10000
+0-18,Male,secondary,10000-20000
+0-18,Male,secondary,20000-40000
+0-18,Male,secondary,40000-60000
+0-18,Male,secondary,60000-80000
+0-18,Male,secondary,80000-150000
+0-18,Male,Further Education,0-10000
+0-18,Male,Further Education,10000-20000
+0-18,Male,Further Education,20000-40000
+0-18,Male,Further Education,40000-60000
+0-18,Male,Further Education,60000-80000
+0-18,Male,Further Education,80000-150000
+0-18,Male,Higher Education,0-10000
+0-18,Male,Higher Education,10000-20000
+0-18,Male,Higher Education,20000-40000
+0-18,Male,Higher Education,40000-60000
+0-18,Male,Higher Education,60000-80000
+0-18,Male,Higher Education,80000-150000
+0-18,Female,early years,0-10000
+0-18,Female,early years,10000-20000
+0-18,Female,early years,20000-40000
+0-18,Female,early years,40000-60000
+0-18,Female,early years,60000-80000
+0-18,Female,early years,80000-150000
+0-18,Female,primary,0-10000
+0-18,Female,primary,10000-20000
+0-18,Female,primary,20000-40000
+0-18,Female,primary,40000-60000
+0-18,Female,primary,60000-80000
+0-18,Female,primary,80000-150000
+0-18,Female,secondary,0-10000
+0-18,Female,secondary,10000-20000
+0-18,Female,secondary,20000-40000
+0-18,Female,secondary,40000-60000
+0-18,Female,secondary,60000-80000
+0-18,Female,secondary,80000-150000
+0-18,Female,Further Education,0-10000
+0-18,Female,Further Education,10000-20000
+0-18,Female,Further Education,20000-40000
+0-18,Female,Further Education,40000-60000
+0-18,Female,Further Education,60000-80000
+0-18,Female,Further Education,80000-150000
+0-18,Female,Higher Education,0-10000
+0-18,Female,Higher Education,10000-20000
+0-18,Female,Higher Education,20000-40000
+0-18,Female,Higher Education,40000-60000
+0-18,Female,Higher Education,60000-80000
+0-18,Female,Higher Education,80000-150000
+19-30,Male,early years,0-10000
+19-30,Male,early years,10000-20000
+19-30,Male,early years,20000-40000
+19-30,Male,early years,40000-60000
+19-30,Male,early years,60000-80000
+19-30,Male,early years,80000-150000
+19-30,Male,primary,0-10000
+19-30,Male,primary,10000-20000
+19-30,Male,primary,20000-40000
+19-30,Male,primary,40000-60000
+19-30,Male,primary,60000-80000
+19-30,Male,primary,80000-150000
+19-30,Male,secondary,0-10000
+19-30,Male,secondary,10000-20000
+19-30,Male,secondary,20000-40000
+19-30,Male,secondary,40000-60000
+19-30,Male,secondary,60000-80000
+19-30,Male,secondary,80000-150000
+19-30,Male,Further Education,0-10000
+19-30,Male,Further Education,10000-20000
+19-30,Male,Further Education,20000-40000
+19-30,Male,Further Education,40000-60000
+19-30,Male,Further Education,60000-80000
+19-30,Male,Further Education,80000-150000
+19-30,Male,Higher Education,0-10000
+19-30,Male,Higher Education,10000-20000
+19-30,Male,Higher Education,20000-40000
+19-30,Male,Higher Education,40000-60000
+19-30,Male,Higher Education,60000-80000
+19-30,Male,Higher Education,80000-150000
+19-30,Female,early years,0-10000
+19-30,Female,early years,10000-20000
+19-30,Female,early years,20000-40000
+19-30,Female,early years,40000-60000
+19-30,Female,early years,60000-80000
+19-30,Female,early years,80000-150000
+19-30,Female,primary,0-10000
+19-30,Female,primary,10000-20000
+19-30,Female,primary,20000-40000
+19-30,Female,primary,40000-60000
+19-30,Female,primary,60000-80000
+19-30,Female,primary,80000-150000
+19-30,Female,secondary,0-10000
+19-30,Female,secondary,10000-20000
+19-30,Female,secondary,20000-40000
+19-30,Female,secondary,40000-60000
+19-30,Female,secondary,60000-80000
+19-30,Female,secondary,80000-150000
+19-30,Female,Further Education,0-10000
+19-30,Female,Further Education,10000-20000
+19-30,Female,Further Education,20000-40000
+19-30,Female,Further Education,40000-60000
+19-30,Female,Further Education,60000-80000
+19-30,Female,Further Education,80000-150000
+19-30,Female,Higher Education,0-10000
+19-30,Female,Higher Education,10000-20000
+19-30,Female,Higher Education,20000-40000
+19-30,Female,Higher Education,40000-60000
+19-30,Female,Higher Education,60000-80000
+19-30,Female,Higher Education,80000-150000
+31-45,Male,early years,0-10000
+31-45,Male,early years,10000-20000
+31-45,Male,early years,20000-40000
+31-45,Male,early years,40000-60000
+31-45,Male,early years,60000-80000
+31-45,Male,early years,80000-150000
+31-45,Male,primary,0-10000
+31-45,Male,primary,10000-20000
+31-45,Male,primary,20000-40000
+31-45,Male,primary,40000-60000
+31-45,Male,primary,60000-80000
+31-45,Male,primary,80000-150000
+31-45,Male,secondary,0-10000
+31-45,Male,secondary,10000-20000
+31-45,Male,secondary,20000-40000
+31-45,Male,secondary,40000-60000
+31-45,Male,secondary,60000-80000
+31-45,Male,secondary,80000-150000
+31-45,Male,Further Education,0-10000
+31-45,Male,Further Education,10000-20000
+31-45,Male,Further Education,20000-40000
+31-45,Male,Further Education,40000-60000
+31-45,Male,Further Education,60000-80000
+31-45,Male,Further Education,80000-150000
+31-45,Male,Higher Education,0-10000
+31-45,Male,Higher Education,10000-20000
+31-45,Male,Higher Education,20000-40000
+31-45,Male,Higher Education,40000-60000
+31-45,Male,Higher Education,60000-80000
+31-45,Male,Higher Education,80000-150000
+31-45,Female,early years,0-10000
+31-45,Female,early years,10000-20000
+31-45,Female,early years,20000-40000
+31-45,Female,early years,40000-60000
+31-45,Female,early years,60000-80000
+31-45,Female,early years,80000-150000
+31-45,Female,primary,0-10000
+31-45,Female,primary,10000-20000
+31-45,Female,primary,20000-40000
+31-45,Female,primary,40000-60000
+31-45,Female,primary,60000-80000
+31-45,Female,primary,80000-150000
+31-45,Female,secondary,0-10000
+31-45,Female,secondary,10000-20000
+31-45,Female,secondary,20000-40000
+31-45,Female,secondary,40000-60000
+31-45,Female,secondary,60000-80000
+31-45,Female,secondary,80000-150000
+31-45,Female,Further Education,0-10000
+31-45,Female,Further Education,10000-20000
+31-45,Female,Further Education,20000-40000
+31-45,Female,Further Education,40000-60000
+31-45,Female,Further Education,60000-80000
+31-45,Female,Further Education,80000-150000
+31-45,Female,Higher Education,0-10000
+31-45,Female,Higher Education,10000-20000
+31-45,Female,Higher Education,20000-40000
+31-45,Female,Higher Education,40000-60000
+31-45,Female,Higher Education,60000-80000
+31-45,Female,Higher Education,80000-150000
+46-60,Male,early years,0-10000
+46-60,Male,early years,10000-20000
+46-60,Male,early years,20000-40000
+46-60,Male,early years,40000-60000
+46-60,Male,early years,60000-80000
+46-60,Male,early years,80000-150000
+46-60,Male,primary,0-10000
+46-60,Male,primary,10000-20000
+46-60,Male,primary,20000-40000
+46-60,Male,primary,40000-60000
+46-60,Male,primary,60000-80000
+46-60,Male,primary,80000-150000
+46-60,Male,secondary,0-10000
+46-60,Male,secondary,10000-20000
+46-60,Male,secondary,20000-40000
+46-60,Male,secondary,40000-60000
+46-60,Male,secondary,60000-80000
+46-60,Male,secondary,80000-150000
+46-60,Male,Further Education,0-10000
+46-60,Male,Further Education,10000-20000
+46-60,Male,Further Education,20000-40000
+46-60,Male,Further Education,40000-60000
+46-60,Male,Further Education,60000-80000
+46-60,Male,Further Education,80000-150000
+46-60,Male,Higher Education,0-10000
+46-60,Male,Higher Education,10000-20000
+46-60,Male,Higher Education,20000-40000
+46-60,Male,Higher Education,40000-60000
+46-60,Male,Higher Education,60000-80000
+46-60,Male,Higher Education,80000-150000
+46-60,Female,early years,0-10000
+46-60,Female,early years,10000-20000
+46-60,Female,early years,20000-40000
+46-60,Female,early years,40000-60000
+46-60,Female,early years,60000-80000
+46-60,Female,early years,80000-150000
+46-60,Female,primary,0-10000
+46-60,Female,primary,10000-20000
+46-60,Female,primary,20000-40000
+46-60,Female,primary,40000-60000
+46-60,Female,primary,60000-80000
+46-60,Female,primary,80000-150000
+46-60,Female,secondary,0-10000
+46-60,Female,secondary,10000-20000
+46-60,Female,secondary,20000-40000
+46-60,Female,secondary,40000-60000
+46-60,Female,secondary,60000-80000
+46-60,Female,secondary,80000-150000
+46-60,Female,Further Education,0-10000
+46-60,Female,Further Education,10000-20000
+46-60,Female,Further Education,20000-40000
+46-60,Female,Further Education,40000-60000
+46-60,Female,Further Education,60000-80000
+46-60,Female,Further Education,80000-150000
+46-60,Female,Higher Education,0-10000
+46-60,Female,Higher Education,10000-20000
+46-60,Female,Higher Education,20000-40000
+46-60,Female,Higher Education,40000-60000
+46-60,Female,Higher Education,60000-80000
+46-60,Female,Higher Education,80000-150000
+61+,Male,early years,0-10000
+61+,Male,early years,10000-20000
+61+,Male,early years,20000-40000
+61+,Male,early years,40000-60000
+61+,Male,early years,60000-80000
+61+,Male,early years,80000-150000
+61+,Male,primary,0-10000
+61+,Male,primary,10000-20000
+61+,Male,primary,20000-40000
+61+,Male,primary,40000-60000
+61+,Male,primary,60000-80000
+61+,Male,primary,80000-150000
+61+,Male,secondary,0-10000
+61+,Male,secondary,10000-20000
+61+,Male,secondary,20000-40000
+61+,Male,secondary,40000-60000
+61+,Male,secondary,60000-80000
+61+,Male,secondary,80000-150000
+61+,Male,Further Education,0-10000
+61+,Male,Further Education,10000-20000
+61+,Male,Further Education,20000-40000
+61+,Male,Further Education,40000-60000
+61+,Male,Further Education,60000-80000
+61+,Male,Further Education,80000-150000
+61+,Male,Higher Education,0-10000
+61+,Male,Higher Education,10000-20000
+61+,Male,Higher Education,20000-40000
+61+,Male,Higher Education,40000-60000
+61+,Male,Higher Education,60000-80000
+61+,Male,Higher Education,80000-150000
+61+,Female,early years,0-10000
+61+,Female,early years,10000-20000
+61+,Female,early years,20000-40000
+61+,Female,early years,40000-60000
+61+,Female,early years,60000-80000
+61+,Female,early years,80000-150000
+61+,Female,primary,0-10000
+61+,Female,primary,10000-20000
+61+,Female,primary,20000-40000
+61+,Female,primary,40000-60000
+61+,Female,primary,60000-80000
+61+,Female,primary,80000-150000
+61+,Female,secondary,0-10000
+61+,Female,secondary,10000-20000
+61+,Female,secondary,20000-40000
+61+,Female,secondary,40000-60000
+61+,Female,secondary,60000-80000
+61+,Female,secondary,80000-150000
+61+,Female,Further Education,0-10000
+61+,Female,Further Education,10000-20000
+61+,Female,Further Education,20000-40000
+61+,Female,Further Education,40000-60000
+61+,Female,Further Education,60000-80000
+61+,Female,Further Education,80000-150000
+61+,Female,Higher Education,0-10000
+61+,Female,Higher Education,10000-20000
+61+,Female,Higher Education,20000-40000
+61+,Female,Higher Education,40000-60000
+61+,Female,Higher Education,60000-80000
+61+,Female,Higher Education,80000-150000

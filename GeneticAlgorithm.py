@@ -6,8 +6,8 @@ import plotly as py
 
 class GeneticAlgorithm:
     def __init__(self, popsize):
-        self.uniformRate = 0.6;
-        self.mutationRate = 0.9;
+        self.uniformRate = 0.7;
+        self.mutationRate = 1;
         self.tournamentSize = 25;
         self.elitism = True;
 
@@ -19,6 +19,8 @@ class GeneticAlgorithm:
             print("Generation: ", str(self.generation_count), " Fitness: ",  str(self.population.getFittest().fitness));
             if count%5==0:
                 self.population.getFittest().plot()
+            # if count%10==0:
+            #     self.population.getFittest().violenplot()
             self.population = self.evolve()
             self.generation_count+=1
             count+=1

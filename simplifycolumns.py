@@ -142,3 +142,25 @@ path = os.path.join(os.path.dirname(os.getcwd()))
 #
 # marital_by_sex_by_age.columns = updated_columns
 # marital_by_sex_by_age.to_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age2.csv'), index=False)
+
+# qualification_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age.csv'))
+# qualification_by_sex_by_age = qualification_by_sex_by_age.rename(columns = {'Sex: All persons; Age: All categories: Age 16 and over; Highest Level of Qualification: All categories: Highest level of qualification; measures: Value':'total'})
+# qualification_by_sex_by_age = qualification_by_sex_by_age.drop(columns=[col for col in qualification_by_sex_by_age.columns if 'All' in col])
+# qualification_by_sex_by_age = qualification_by_sex_by_age.drop(columns=['date', 'geography'])
+# columns = list(qualification_by_sex_by_age.columns)[2:]
+# updated_columns = ['geography code', 'total']
+# for column in columns:
+#     genders = column.split(";")[0].replace('Sex: Females', 'F').replace('Sex: Males', 'M')
+#     ages = column.split(";")[1].replace(' Age: Age ', '').replace(' and over', '+'). replace(' to ', '-').replace(' and under', '*')
+#     qualification = column.split(";")[2]
+#     qualification = qualification.replace(' Highest Level of Qualification: Level 1 qualifications', 'level1')
+#     qualification = qualification.replace(' Highest Level of Qualification: Level 2 qualifications', 'level2')
+#     qualification = qualification.replace(' Highest Level of Qualification: Apprenticeship', 'apprent')
+#     qualification = qualification.replace(' Highest Level of Qualification: Level 3 qualifications', 'level3')
+#     qualification = qualification.replace(' Highest Level of Qualification: Level 4 qualifications and above', 'level4+')
+#     qualification = qualification.replace(' Highest Level of Qualification: Other qualifications', 'other')
+#     qualification = qualification.replace(' Highest Level of Qualification: No qualifications', 'no')
+#     updated_columns.append(genders + ' ' +  ages +  ' ' + qualification)
+#
+# qualification_by_sex_by_age.columns = updated_columns
+# qualification_by_sex_by_age.to_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age2.csv'), index=False)

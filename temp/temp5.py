@@ -1,0 +1,217 @@
+import random
+import numpy
+from Person import Person
+import pandas as pd
+from collections import Counter
+import matplotlib.pyplot as plt
+import pandas as pd
+import InputData as ID
+import InputCrossTables as ICT
+from collections import Counter
+import numpy as np
+import pandas as pd
+import  plotly as py
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+class Individual:
+    def __init__(self):
+        self.genelength = ID.Total
+        # self.keys = ['M 0-4 C', 'M 0-4 B', 'M 0-4 H', 'M 0-4 J', 'M 0-4 M', 'M 0-4 S', 'M 0-4 O', 'M 0-4 N', 'M 0-4 NS',
+        #              'M 5-7 C', 'M 5-7 B', 'M 5-7 H', 'M 5-7 J', 'M 5-7 M', 'M 5-7 S', 'M 5-7 O', 'M 5-7 N', 'M 5-7 NS',
+        #              'M 8-9 C', 'M 8-9 B', 'M 8-9 H', 'M 8-9 J', 'M 8-9 M', 'M 8-9 S', 'M 8-9 O', 'M 8-9 N', 'M 8-9 NS',
+        #              'M 10-14 C', 'M 10-14 B', 'M 10-14 H', 'M 10-14 J', 'M 10-14 M', 'M 10-14 S', 'M 10-14 O',
+        #              'M 10-14 N', 'M 10-14 NS', 'M 15 C', 'M 15 B', 'M 15 H', 'M 15 J', 'M 15 M', 'M 15 S', 'M 15 O',
+        #              'M 15 N', 'M 15 NS', 'M 16-17 C', 'M 16-17 B', 'M 16-17 H', 'M 16-17 J', 'M 16-17 M', 'M 16-17 S',
+        #              'M 16-17 O', 'M 16-17 N', 'M 16-17 NS', 'M 18-19 C', 'M 18-19 B', 'M 18-19 H', 'M 18-19 J',
+        #              'M 18-19 M', 'M 18-19 S', 'M 18-19 O', 'M 18-19 N', 'M 18-19 NS', 'M 20-24 C', 'M 20-24 B',
+        #              'M 20-24 H', 'M 20-24 J', 'M 20-24 M', 'M 20-24 S', 'M 20-24 O', 'M 20-24 N', 'M 20-24 NS',
+        #              'M 25-29 C', 'M 25-29 B', 'M 25-29 H', 'M 25-29 J', 'M 25-29 M', 'M 25-29 S', 'M 25-29 O',
+        #              'M 25-29 N', 'M 25-29 NS', 'M 30-34 C', 'M 30-34 B', 'M 30-34 H', 'M 30-34 J', 'M 30-34 M',
+        #              'M 30-34 S', 'M 30-34 O', 'M 30-34 N', 'M 30-34 NS', 'M 35-39 C', 'M 35-39 B', 'M 35-39 H',
+        #              'M 35-39 J', 'M 35-39 M', 'M 35-39 S', 'M 35-39 O', 'M 35-39 N', 'M 35-39 NS', 'M 40-44 C',
+        #              'M 40-44 B', 'M 40-44 H', 'M 40-44 J', 'M 40-44 M', 'M 40-44 S', 'M 40-44 O', 'M 40-44 N',
+        #              'M 40-44 NS', 'M 45-49 C', 'M 45-49 B', 'M 45-49 H', 'M 45-49 J', 'M 45-49 M', 'M 45-49 S',
+        #              'M 45-49 O', 'M 45-49 N', 'M 45-49 NS', 'M 50-54 C', 'M 50-54 B', 'M 50-54 H', 'M 50-54 J',
+        #              'M 50-54 M', 'M 50-54 S', 'M 50-54 O', 'M 50-54 N', 'M 50-54 NS', 'M 55-59 C', 'M 55-59 B',
+        #              'M 55-59 H', 'M 55-59 J', 'M 55-59 M', 'M 55-59 S', 'M 55-59 O', 'M 55-59 N', 'M 55-59 NS',
+        #              'M 60-64 C', 'M 60-64 B', 'M 60-64 H', 'M 60-64 J', 'M 60-64 M', 'M 60-64 S', 'M 60-64 O',
+        #              'M 60-64 N', 'M 60-64 NS', 'M 65-69 C', 'M 65-69 B', 'M 65-69 H', 'M 65-69 J', 'M 65-69 M',
+        #              'M 65-69 S', 'M 65-69 O', 'M 65-69 N', 'M 65-69 NS', 'M 70-74 C', 'M 70-74 B', 'M 70-74 H',
+        #              'M 70-74 J', 'M 70-74 M', 'M 70-74 S', 'M 70-74 O', 'M 70-74 N', 'M 70-74 NS', 'M 75-79 C',
+        #              'M 75-79 B', 'M 75-79 H', 'M 75-79 J', 'M 75-79 M', 'M 75-79 S', 'M 75-79 O', 'M 75-79 N',
+        #              'M 75-79 NS', 'M 80-84 C', 'M 80-84 B', 'M 80-84 H', 'M 80-84 J', 'M 80-84 M', 'M 80-84 S',
+        #              'M 80-84 O', 'M 80-84 N', 'M 80-84 NS', 'M 85+ C', 'M 85+ B', 'M 85+ H', 'M 85+ J', 'M 85+ M',
+        #              'M 85+ S', 'M 85+ O', 'M 85+ N', 'M 85+ NS', 'F 0-4 C', 'F 0-4 B', 'F 0-4 H', 'F 0-4 J', 'F 0-4 M',
+        #              'F 0-4 S', 'F 0-4 O', 'F 0-4 N', 'F 0-4 NS', 'F 5-7 C', 'F 5-7 B', 'F 5-7 H', 'F 5-7 J', 'F 5-7 M',
+        #              'F 5-7 S', 'F 5-7 O', 'F 5-7 N', 'F 5-7 NS', 'F 8-9 C', 'F 8-9 B', 'F 8-9 H', 'F 8-9 J', 'F 8-9 M',
+        #              'F 8-9 S', 'F 8-9 O', 'F 8-9 N', 'F 8-9 NS', 'F 10-14 C', 'F 10-14 B', 'F 10-14 H', 'F 10-14 J',
+        #              'F 10-14 M', 'F 10-14 S', 'F 10-14 O', 'F 10-14 N', 'F 10-14 NS', 'F 15 C', 'F 15 B', 'F 15 H',
+        #              'F 15 J', 'F 15 M', 'F 15 S', 'F 15 O', 'F 15 N', 'F 15 NS', 'F 16-17 C', 'F 16-17 B', 'F 16-17 H',
+        #              'F 16-17 J', 'F 16-17 M', 'F 16-17 S', 'F 16-17 O', 'F 16-17 N', 'F 16-17 NS', 'F 18-19 C',
+        #              'F 18-19 B', 'F 18-19 H', 'F 18-19 J', 'F 18-19 M', 'F 18-19 S', 'F 18-19 O', 'F 18-19 N',
+        #              'F 18-19 NS', 'F 20-24 C', 'F 20-24 B', 'F 20-24 H', 'F 20-24 J', 'F 20-24 M', 'F 20-24 S',
+        #              'F 20-24 O', 'F 20-24 N', 'F 20-24 NS', 'F 25-29 C', 'F 25-29 B', 'F 25-29 H', 'F 25-29 J',
+        #              'F 25-29 M', 'F 25-29 S', 'F 25-29 O', 'F 25-29 N', 'F 25-29 NS', 'F 30-34 C', 'F 30-34 B',
+        #              'F 30-34 H', 'F 30-34 J', 'F 30-34 M', 'F 30-34 S', 'F 30-34 O', 'F 30-34 N', 'F 30-34 NS',
+        #              'F 35-39 C', 'F 35-39 B', 'F 35-39 H', 'F 35-39 J', 'F 35-39 M', 'F 35-39 S', 'F 35-39 O',
+        #              'F 35-39 N', 'F 35-39 NS', 'F 40-44 C', 'F 40-44 B', 'F 40-44 H', 'F 40-44 J', 'F 40-44 M',
+        #              'F 40-44 S', 'F 40-44 O', 'F 40-44 N', 'F 40-44 NS', 'F 45-49 C', 'F 45-49 B', 'F 45-49 H',
+        #              'F 45-49 J', 'F 45-49 M', 'F 45-49 S', 'F 45-49 O', 'F 45-49 N', 'F 45-49 NS', 'F 50-54 C',
+        #              'F 50-54 B', 'F 50-54 H', 'F 50-54 J', 'F 50-54 M', 'F 50-54 S', 'F 50-54 O', 'F 50-54 N',
+        #              'F 50-54 NS', 'F 55-59 C', 'F 55-59 B', 'F 55-59 H', 'F 55-59 J', 'F 55-59 M', 'F 55-59 S',
+        #              'F 55-59 O', 'F 55-59 N', 'F 55-59 NS', 'F 60-64 C', 'F 60-64 B', 'F 60-64 H', 'F 60-64 J',
+        #              'F 60-64 M', 'F 60-64 S', 'F 60-64 O', 'F 60-64 N', 'F 60-64 NS', 'F 65-69 C', 'F 65-69 B',
+        #              'F 65-69 H', 'F 65-69 J', 'F 65-69 M', 'F 65-69 S', 'F 65-69 O', 'F 65-69 N', 'F 65-69 NS',
+        #              'F 70-74 C', 'F 70-74 B', 'F 70-74 H', 'F 70-74 J', 'F 70-74 M', 'F 70-74 S', 'F 70-74 O',
+        #              'F 70-74 N', 'F 70-74 NS', 'F 75-79 C', 'F 75-79 B', 'F 75-79 H', 'F 75-79 J', 'F 75-79 M',
+        #              'F 75-79 S', 'F 75-79 O', 'F 75-79 N', 'F 75-79 NS', 'F 80-84 C', 'F 80-84 B', 'F 80-84 H',
+        #              'F 80-84 J', 'F 80-84 M', 'F 80-84 S', 'F 80-84 O', 'F 80-84 N', 'F 80-84 NS', 'F 85+ C',
+        #              'F 85+ B', 'F 85+ H', 'F 85+ J', 'F 85+ M', 'F 85+ S', 'F 85+ O', 'F 85+ N', 'F 85+ NS']
+
+        # self.age_samples = ID.get_weighted_samples(ID.age5ydf, self.genelength)
+        # self.sex_samples = ID.get_weighted_samples(ID.sexdf, self.genelength)
+        # self.eth_samples = ID.get_weighted_samples(ID.ethnicdf, self.genelength)
+        # self.rel_samples = ID.get_weighted_samples(ID.religiondf, self.genelength)
+        self.genes = self.generateAll()
+
+        # self.actual = ICT.get_dictionary(ICT.religion_by_sex_by_age)
+        self.actual = ICT.get_dictionary(ICT.sex_by_age_5yrs)
+        self.predicted = self.getpredicted()
+        self.fitness = self.getFitness()
+
+    def generate(self, id):
+        # rnd = random.randrange(0, self.genelength)
+        # age= self.age_samples[rnd]
+        # sex = self.sex_samples[rnd]
+        # ethnicity = self.eth_samples[rnd]
+        # religion = self.rel_samples[rnd]
+        age = random.choice(list(ID.age5ydf.columns)[2:])
+        sex = random.choice(list(ID.sexdf.columns)[2:])
+        ethnicity = random.choice(list(ID.ethnicdf.columns)[2:])
+        religion = random.choice(list(ID.religiondf.columns)[2:])
+        return Person(id, age=age, sex=sex, ethnicity=ethnicity, religion=religion)
+    def generateAll(self):
+        persons = []
+        # for i in range(0, self.genelength):
+        #     age = self.age_samples[i]
+        #     sex = self.sex_samples[i]
+        #     ethnicity = self.eth_samples[i]
+        #     religion = self.rel_samples[i]
+        #     person = Person(i + 1, age=age, sex=sex, ethnicity=ethnicity, religion=religion)
+        #     persons.append(person)
+
+        for i in range(0, self.genelength):
+            age = random.choice(list(ID.age5ydf.columns)[2:])
+            sex = random.choice(list(ID.sexdf.columns)[2:])
+            ethnicity = random.choice(list(ID.ethnicdf.columns)[2:])
+            religion = random.choice(list(ID.religiondf.columns)[2:])
+            person = Person(i + 1, age=age, sex=sex, ethnicity=ethnicity, religion=religion)
+            persons.append(person)
+        return persons
+
+    def getpredicted(self):
+        temp = []
+        for gene in self.genes:
+            temp.append(gene.age + " " + gene.sex)
+        pred = Counter(temp)
+        # for key in self.keys:
+        #     val = pred.get(key)
+        #     if val==None:
+        #         pred[key]=0
+        return pred
+
+    # def getpredicted(self):
+    #     temp = []
+    #     for gene in self.genes:
+    #         temp.append(gene.sex + " " + gene.age + " " + gene.religion)
+    #     pred = Counter(temp)
+    #     for key in self.keys:
+    #         val = pred.get(key)
+    #         if val==None:
+    #             pred[key]=0
+    #     return pred
+    #
+    def getFitness(self):
+        return self.RMSE()
+
+    def setFitness(self):
+        self.fitness = self.getFitness()
+
+    def RMSE(self):
+        rmse = np.sqrt(((np.array(list(self.predicted.values())) - np.array(list(self.actual.values()))) ** 2).mean())
+        return rmse
+
+    def __str__(self) -> str:
+        output = ""
+        for i in range(0, self.genelength):
+            output += self.genes[i].__str__() + "\n"
+        return  "{} | {}".format(output, self.fitness)
+
+    def getSingleGene(self, index):
+        return self.genes[index]
+
+    def setSingleGene(self, index, value):
+        self.genes[index] = value;
+
+    def randomize(self, gene_index):
+        self.genes[gene_index] = self.generate(gene_index)
+
+
+    def split_dictionary(self, dictionary, categories, position):
+        groups = []
+        for category in categories:
+            group = []
+            for c in category:
+                dic = {}
+                for key, value in dictionary.items():
+                    subkey = key.split(' ')[position]
+                    if subkey == c:
+                        dic[key] = value
+                group.append(dic)
+            groups.append(group)
+        return groups
+
+    def plot(self):
+        fig = go.Figure()
+        fig.add_trace(go.Violin(x0='data', name='actual', y=list(self.actual.values()), line_color='#636EFA', side='negative'))
+        fig.add_trace(go.Violin(x0='data', name='pred', y=list(self.predicted.values()), line_color='#EF553B', side='positive'))
+        fig.update_layout(title='RMSE='+ str(self.RMSE()), showlegend=False)
+        py.offline.plot(fig, filename="violen.html")
+        fig.show()
+
+    def barplot(self):
+        fig = make_subplots(rows=6, cols=2,
+            subplot_titles=('Male - Child', 'Female - Child', 'Male - Adult', 'Female - Adult', 'Male - Elders', 'Female - Elders'),
+                            horizontal_spacing = 0.05, vertical_spacing=  0.1)  # 3age groups x 2genders
+        dic = {}
+        for key in self.keys:
+            dic[key] = (self.actual.get(key), self.predicted.get(key))
+
+        row = 1
+        col = 1
+        groups = self.split_dictionary(dic, ['M', 'F'], position=0)
+        for group in groups:
+            subgroups = self.split_dictionary(group[0], [['0-4', '5-7', '8-9', '10-14', '15'], ['16-17', '18-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59'], ['60-64', '65-69', '70-74', '75-79', '80-84', '85+']], position=1)
+            for subgroup in subgroups:
+                keys = list(subgroup[0].keys())
+                actual = [i[0] for i in list(subgroup[0].values())]
+                predicted = [i[1] for i in list(subgroup[0].values())]
+                fig.add_trace(
+                    go.Bar(x=[k.split(' ')[2] for k in keys], y=actual, marker={'color':'#636EFA'}),
+                    row=row, col=col
+                )
+                fig.add_trace(
+                    go.Bar(x=[k.split(' ')[2] for k in keys], y=predicted, marker={'color':'#EF553B'}),
+                    row=row, col=col
+                )
+                row+=1
+            col+=1
+            row=1
+        fig.update_layout(width=1300, height=1100, title='RMSE='+ str(self.RMSE()), showlegend=False)
+        py.offline.plot(fig, filename="bar.html")
+        fig.show()
+
+# ind = Individual()
+# ind.generate(1)
+

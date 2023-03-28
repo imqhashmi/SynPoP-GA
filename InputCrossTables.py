@@ -68,44 +68,19 @@ def generate_combinations(left, right, total):
 
 path = os.path.join(os.path.dirname(os.getcwd()))
 
-sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'sex_by_age_5yrs.csv'))
+sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'sex_by_age_5yrs.csv'))
 sex_by_age = sex_by_age[sex_by_age['geography code'] == 'E02005949']
 
-religion_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'religion_by_sex_by_age.csv'))
+religion_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'religion_by_sex_by_age.csv'))
 religion_by_sex_by_age = religion_by_sex_by_age[religion_by_sex_by_age['geography code'] == 'E02005949']
 religion_by_sex_by_age = religion_by_sex_by_age.drop(columns=[col for col in religion_by_sex_by_age.columns if 'All' in col])
 
-ethnic_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'ethnic_by_sex_by_age.csv'))
+ethnic_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'ethnic_by_sex_by_age.csv'))
 ethnic_by_sex_by_age = ethnic_by_sex_by_age[ethnic_by_sex_by_age['geography code'] == 'E02005949']
 
 
-marital_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age.csv'))
+marital_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age.csv'))
 marital_by_sex_by_age = marital_by_sex_by_age[marital_by_sex_by_age['geography code'] == 'E02005949']
 
-
-# print(get_weighted_samples_by_age_sex(marital_by_sex_by_age, '35-49', 'M', 10))
-
-# rsamples = get_weighted_samples(religion_by_sex_by_age)
-# esamples = get_weighted_samples(ethnic_by_sex_by_age)
-
-# result = generate_combinations(rsamples, esamples, len(rsamples))
-
-
-
-
-
-# predicted = {}
-# predicted_samples = Counter(samples)
-# for key in getkeys(religion_by_sex_by_age):
-#     pvalue = predicted_samples.get(key)
-#     if pvalue==None:
-#         pvalue=0
-#     predicted[key]=pvalue
-#
-# actual = np.array(list(actual.values()))
-# predicted = np.array(list(predicted.values()))
-#
-# rmse = np.sqrt(((predicted - actual) ** 2).mean())
-# actual = np.sort(actual)
-# predicted = np.sort(predicted)
-# plot(actual, predicted, rmse)
+qualification_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age.csv'))
+qualification_by_sex_by_age = qualification_by_sex_by_age[qualification_by_sex_by_age['geography code'] == 'E02005949']
