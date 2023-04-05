@@ -1,0 +1,31 @@
+Household Composition: All categories: Household composition; measures: Value,total
+Household Composition: One person household: Total; measures: Value,Household Composition: One person household: Total; measures: Value
+Household Composition: One person household: Aged 65 and over; measures: Value,1P 65+
+Household Composition: One person household: Other; measures: Value,1P 65-
+Household Composition: One family only: Total; measures: Value,Household Composition: One family only: Total; measures: Value
+Household Composition: One family only: All aged 65 and over; measures: Value,1F 65+
+Household Composition: One family only: Married couple: Total; measures: Value,Household Composition: One family only: Married couple: Total; measures: Value
+Household Composition: One family only: Married couple: No children; measures: Value,1F M NC
+Household Composition: One family only: Married couple: One dependent child; measures: Value,1F M 1C
+Household Composition: One family only: Married couple: Two or more dependent children; measures: Value,1F M 2C+
+Household Composition: One family only: Married couple: All children non-dependent; measures: Value,1F M NDC
+Household Composition: One family only: Same-sex civil partnership couple: Total; measures: Value,Household Composition: One family only: Same-sex civil partnership couple: Total; measures: Value
+Household Composition: One family only: Same-sex civil partnership couple: No children; measures: Value,1F P NC
+Household Composition: One family only: Same-sex civil partnership couple: One dependent child; measures: Value,1F P 1C
+Household Composition: One family only: Same-sex civil partnership couple: Two or more dependent children; measures: Value,1F P 2C+
+Household Composition: One family only: Same-sex civil partnership couple: All children non-dependent; measures: Value,1F P NDC
+Household Composition: One family only: Cohabiting couple: Total; measures: Value,Household Composition: One family only: Cohabiting couple: Total; measures: Value
+Household Composition: One family only: Cohabiting couple: No children; measures: Value,1F 2S NC
+Household Composition: One family only: Cohabiting couple: One dependent child; measures: Value,1F 2S 1C
+Household Composition: One family only: Cohabiting couple: Two or more dependent children; measures: Value,1F 2S 2C+
+Household Composition: One family only: Cohabiting couple: All children non-dependent; measures: Value,1F 2S NDC
+Household Composition: One family only: Lone parent: Total; measures: Value,Household Composition: One family only: Lone parent: Total; measures: Value
+Household Composition: One family only: Lone parent: One dependent child; measures: Value,1F 1S 1C
+Household Composition: One family only: Lone parent: Two or more dependent children; measures: Value,1F 1S 2C+
+Household Composition: One family only: Lone parent: All children non-dependent; measures: Value,1F 1S NDC
+Household Composition: Other household types: Total; measures: Value,Household Composition: Other household types: Total; measures: Value
+Household Composition: Other household types: With one dependent child; measures: Value,OF 1C
+Household Composition: Other household types: With two or more dependent children; measures: Value,OF 2C+
+Household Composition: Other household types: All full-time students; measures: Value,OF Stud
+Household Composition: Other household types: All aged 65 and over; measures: Value,OF 65+
+Household Composition: Other household types: Other; measures: Value,OF O

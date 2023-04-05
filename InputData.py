@@ -9,6 +9,17 @@ import plotly as py
 from Person import Person
 import math
 
+def getdictionary(df):
+    if 'total' in df.columns:
+        df = df.iloc[:, 1:] #drop total column
+    dic = {}
+    for index, row in df.iterrows():
+        for index, column in enumerate(df.columns):
+            if index==0:
+                continue
+            dic[column] = int(row[column])
+    return dic
+
 def get_weighted_sample(df):
     groups = list(df.columns)[2:] #drop first two columns: areacode and total
     values = df.values.flatten().tolist()[1:]
@@ -66,4 +77,12 @@ qualdf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'individua
 qualdf = qualdf[qualdf['geography code'] == 'E02005949']
 
 
+HHsizedf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'household', 'Householdsize.csv'))
+HHsizedf = HHsizedf[HHsizedf['geography code'] == 'E02005949']
 
+HHcomdf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'household', 'HouseholdComposition.csv'))
+HHcomdf = HHcomdf.drop(columns=[col for col in HHcomdf.columns if 'Total' in col])
+HHcomdf = HHcomdf[HHcomdf['geography code'] == 'E02005949']
+
+
+print(getdictionary(ethnicdf))

@@ -1,3 +1,5 @@
+import pandas as pd
+
 from Population import Population
 from Individual import Individual
 import random
@@ -15,15 +17,18 @@ class GeneticAlgorithm:
         self.population = Population(self.popsize, isNew=True)
         self.generation_count = 1
         count=0
-        while self.population.getFittest().fitness > 0:
+        while sum(list(self.population.getFittest().fitness.values())) > 0:
             print("Generation: ", str(self.generation_count), " Fitness: ",  str(self.population.getFittest().fitness));
-            if count%5==0:
-                self.population.getFittest().plot()
+            # if count%5==0:
+            #     self.population.getFittest()
             # if count%10==0:
             #     self.population.getFittest().violenplot()
             self.population = self.evolve()
             self.generation_count+=1
             count+=1
+            if count>30:
+                df = pd.DataFrame(self.population)
+                df.to_csv('population.cvs', index=False)
     def evolve(self):
         elitism_offset = 0
         newpopulation = Population(self.population.size, False)
@@ -42,7 +47,7 @@ class GeneticAlgorithm:
         for i in range(elitism_offset, self.population.size):
            self.mutate(newpopulation.getIndividual(i))
 
-        newpopulation.updateFitness()
+        # newpopulation.updateFitness()
         return newpopulation
 
     def crossover(self, ind1:Individual, ind2:Individual):

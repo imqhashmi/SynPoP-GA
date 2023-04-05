@@ -21,10 +21,7 @@ class Individual:
         self.EKeys = ['M 0-4 W0', 'M 0-4 W1', 'M 0-4 W2', 'M 0-4 W3', 'M 0-4 M0', 'M 0-4 M1', 'M 0-4 M2', 'M 0-4 M3', 'M 0-4 A0', 'M 0-4 A1', 'M 0-4 A2', 'M 0-4 A3', 'M 0-4 A4', 'M 0-4 B0', 'M 0-4 B1', 'M 0-4 B2', 'M 0-4 O0', 'M 0-4 O1', 'M 5-7 W0', 'M 5-7 W1', 'M 5-7 W2', 'M 5-7 W3', 'M 5-7 M0', 'M 5-7 M1', 'M 5-7 M2', 'M 5-7 M3', 'M 5-7 A0', 'M 5-7 A1', 'M 5-7 A2', 'M 5-7 A3', 'M 5-7 A4', 'M 5-7 B0', 'M 5-7 B1', 'M 5-7 B2', 'M 5-7 O0', 'M 5-7 O1', 'M 8-9 W0', 'M 8-9 W1', 'M 8-9 W2', 'M 8-9 W3', 'M 8-9 M0', 'M 8-9 M1', 'M 8-9 M2', 'M 8-9 M3', 'M 8-9 A0', 'M 8-9 A1', 'M 8-9 A2', 'M 8-9 A3', 'M 8-9 A4', 'M 8-9 B0', 'M 8-9 B1', 'M 8-9 B2', 'M 8-9 O0', 'M 8-9 O1', 'M 10-14 W0', 'M 10-14 W1', 'M 10-14 W2', 'M 10-14 W3', 'M 10-14 M0', 'M 10-14 M1', 'M 10-14 M2', 'M 10-14 M3', 'M 10-14 A0', 'M 10-14 A1', 'M 10-14 A2', 'M 10-14 A3', 'M 10-14 A4', 'M 10-14 B0', 'M 10-14 B1', 'M 10-14 B2', 'M 10-14 O0', 'M 10-14 O1', 'M 15 W0', 'M 15 W1', 'M 15 W2', 'M 15 W3', 'M 15 M0', 'M 15 M1', 'M 15 M2', 'M 15 M3', 'M 15 A0', 'M 15 A1', 'M 15 A2', 'M 15 A3', 'M 15 A4', 'M 15 B0', 'M 15 B1', 'M 15 B2', 'M 15 O0', 'M 15 O1', 'M 16-17 W0', 'M 16-17 W1', 'M 16-17 W2', 'M 16-17 W3', 'M 16-17 M0', 'M 16-17 M1', 'M 16-17 M2', 'M 16-17 M3', 'M 16-17 A0', 'M 16-17 A1', 'M 16-17 A2', 'M 16-17 A3', 'M 16-17 A4', 'M 16-17 B0', 'M 16-17 B1', 'M 16-17 B2', 'M 16-17 O0', 'M 16-17 O1', 'M 18-19 W0', 'M 18-19 W1', 'M 18-19 W2', 'M 18-19 W3', 'M 18-19 M0', 'M 18-19 M1', 'M 18-19 M2', 'M 18-19 M3', 'M 18-19 A0', 'M 18-19 A1', 'M 18-19 A2', 'M 18-19 A3', 'M 18-19 A4', 'M 18-19 B0', 'M 18-19 B1', 'M 18-19 B2', 'M 18-19 O0', 'M 18-19 O1', 'M 20-24 W0', 'M 20-24 W1', 'M 20-24 W2', 'M 20-24 W3', 'M 20-24 M0', 'M 20-24 M1', 'M 20-24 M2', 'M 20-24 M3', 'M 20-24 A0', 'M 20-24 A1', 'M 20-24 A2', 'M 20-24 A3', 'M 20-24 A4', 'M 20-24 B0', 'M 20-24 B1', 'M 20-24 B2', 'M 20-24 O0', 'M 20-24 O1', 'M 25-29 W0', 'M 25-29 W1', 'M 25-29 W2', 'M 25-29 W3', 'M 25-29 M0', 'M 25-29 M1', 'M 25-29 M2', 'M 25-29 M3', 'M 25-29 A0', 'M 25-29 A1', 'M 25-29 A2', 'M 25-29 A3', 'M 25-29 A4', 'M 25-29 B0', 'M 25-29 B1', 'M 25-29 B2', 'M 25-29 O0', 'M 25-29 O1', 'M 30-34 W0', 'M 30-34 W1', 'M 30-34 W2', 'M 30-34 W3', 'M 30-34 M0', 'M 30-34 M1', 'M 30-34 M2', 'M 30-34 M3', 'M 30-34 A0', 'M 30-34 A1', 'M 30-34 A2', 'M 30-34 A3', 'M 30-34 A4', 'M 30-34 B0', 'M 30-34 B1', 'M 30-34 B2', 'M 30-34 O0', 'M 30-34 O1', 'M 35-39 W0', 'M 35-39 W1', 'M 35-39 W2', 'M 35-39 W3', 'M 35-39 M0', 'M 35-39 M1', 'M 35-39 M2', 'M 35-39 M3', 'M 35-39 A0', 'M 35-39 A1', 'M 35-39 A2', 'M 35-39 A3', 'M 35-39 A4', 'M 35-39 B0', 'M 35-39 B1', 'M 35-39 B2', 'M 35-39 O0', 'M 35-39 O1', 'M 40-44 W0', 'M 40-44 W1', 'M 40-44 W2', 'M 40-44 W3', 'M 40-44 M0', 'M 40-44 M1', 'M 40-44 M2', 'M 40-44 M3', 'M 40-44 A0', 'M 40-44 A1', 'M 40-44 A2', 'M 40-44 A3', 'M 40-44 A4', 'M 40-44 B0', 'M 40-44 B1', 'M 40-44 B2', 'M 40-44 O0', 'M 40-44 O1', 'M 45-49 W0', 'M 45-49 W1', 'M 45-49 W2', 'M 45-49 W3', 'M 45-49 M0', 'M 45-49 M1', 'M 45-49 M2', 'M 45-49 M3', 'M 45-49 A0', 'M 45-49 A1', 'M 45-49 A2', 'M 45-49 A3', 'M 45-49 A4', 'M 45-49 B0', 'M 45-49 B1', 'M 45-49 B2', 'M 45-49 O0', 'M 45-49 O1', 'M 50-54 W0', 'M 50-54 W1', 'M 50-54 W2', 'M 50-54 W3', 'M 50-54 M0', 'M 50-54 M1', 'M 50-54 M2', 'M 50-54 M3', 'M 50-54 A0', 'M 50-54 A1', 'M 50-54 A2', 'M 50-54 A3', 'M 50-54 A4', 'M 50-54 B0', 'M 50-54 B1', 'M 50-54 B2', 'M 50-54 O0', 'M 50-54 O1', 'M 55-59 W0', 'M 55-59 W1', 'M 55-59 W2', 'M 55-59 W3', 'M 55-59 M0', 'M 55-59 M1', 'M 55-59 M2', 'M 55-59 M3', 'M 55-59 A0', 'M 55-59 A1', 'M 55-59 A2', 'M 55-59 A3', 'M 55-59 A4', 'M 55-59 B0', 'M 55-59 B1', 'M 55-59 B2', 'M 55-59 O0', 'M 55-59 O1', 'M 60-64 W0', 'M 60-64 W1', 'M 60-64 W2', 'M 60-64 W3', 'M 60-64 M0', 'M 60-64 M1', 'M 60-64 M2', 'M 60-64 M3', 'M 60-64 A0', 'M 60-64 A1', 'M 60-64 A2', 'M 60-64 A3', 'M 60-64 A4', 'M 60-64 B0', 'M 60-64 B1', 'M 60-64 B2', 'M 60-64 O0', 'M 60-64 O1', 'M 65-69 W0', 'M 65-69 W1', 'M 65-69 W2', 'M 65-69 W3', 'M 65-69 M0', 'M 65-69 M1', 'M 65-69 M2', 'M 65-69 M3', 'M 65-69 A0', 'M 65-69 A1', 'M 65-69 A2', 'M 65-69 A3', 'M 65-69 A4', 'M 65-69 B0', 'M 65-69 B1', 'M 65-69 B2', 'M 65-69 O0', 'M 65-69 O1', 'M 70-74 W0', 'M 70-74 W1', 'M 70-74 W2', 'M 70-74 W3', 'M 70-74 M0', 'M 70-74 M1', 'M 70-74 M2', 'M 70-74 M3', 'M 70-74 A0', 'M 70-74 A1', 'M 70-74 A2', 'M 70-74 A3', 'M 70-74 A4', 'M 70-74 B0', 'M 70-74 B1', 'M 70-74 B2', 'M 70-74 O0', 'M 70-74 O1', 'M 75-79 W0', 'M 75-79 W1', 'M 75-79 W2', 'M 75-79 W3', 'M 75-79 M0', 'M 75-79 M1', 'M 75-79 M2', 'M 75-79 M3', 'M 75-79 A0', 'M 75-79 A1', 'M 75-79 A2', 'M 75-79 A3', 'M 75-79 A4', 'M 75-79 B0', 'M 75-79 B1', 'M 75-79 B2', 'M 75-79 O0', 'M 75-79 O1', 'M 80-84 W0', 'M 80-84 W1', 'M 80-84 W2', 'M 80-84 W3', 'M 80-84 M0', 'M 80-84 M1', 'M 80-84 M2', 'M 80-84 M3', 'M 80-84 A0', 'M 80-84 A1', 'M 80-84 A2', 'M 80-84 A3', 'M 80-84 A4', 'M 80-84 B0', 'M 80-84 B1', 'M 80-84 B2', 'M 80-84 O0', 'M 80-84 O1', 'M 85+ W0', 'M 85+ W1', 'M 85+ W2', 'M 85+ W3', 'M 85+ M0', 'M 85+ M1', 'M 85+ M2', 'M 85+ M3', 'M 85+ A0', 'M 85+ A1', 'M 85+ A2', 'M 85+ A3', 'M 85+ A4', 'M 85+ B0', 'M 85+ B1', 'M 85+ B2', 'M 85+ O0', 'M 85+ O1', 'F 0-4 W0', 'F 0-4 W1', 'F 0-4 W2', 'F 0-4 W3', 'F 0-4 M0', 'F 0-4 M1', 'F 0-4 M2', 'F 0-4 M3', 'F 0-4 A0', 'F 0-4 A1', 'F 0-4 A2', 'F 0-4 A3', 'F 0-4 A4', 'F 0-4 B0', 'F 0-4 B1', 'F 0-4 B2', 'F 0-4 O0', 'F 0-4 O1', 'F 5-7 W0', 'F 5-7 W1', 'F 5-7 W2', 'F 5-7 W3', 'F 5-7 M0', 'F 5-7 M1', 'F 5-7 M2', 'F 5-7 M3', 'F 5-7 A0', 'F 5-7 A1', 'F 5-7 A2', 'F 5-7 A3', 'F 5-7 A4', 'F 5-7 B0', 'F 5-7 B1', 'F 5-7 B2', 'F 5-7 O0', 'F 5-7 O1', 'F 8-9 W0', 'F 8-9 W1', 'F 8-9 W2', 'F 8-9 W3', 'F 8-9 M0', 'F 8-9 M1', 'F 8-9 M2', 'F 8-9 M3', 'F 8-9 A0', 'F 8-9 A1', 'F 8-9 A2', 'F 8-9 A3', 'F 8-9 A4', 'F 8-9 B0', 'F 8-9 B1', 'F 8-9 B2', 'F 8-9 O0', 'F 8-9 O1', 'F 10-14 W0', 'F 10-14 W1', 'F 10-14 W2', 'F 10-14 W3', 'F 10-14 M0', 'F 10-14 M1', 'F 10-14 M2', 'F 10-14 M3', 'F 10-14 A0', 'F 10-14 A1', 'F 10-14 A2', 'F 10-14 A3', 'F 10-14 A4', 'F 10-14 B0', 'F 10-14 B1', 'F 10-14 B2', 'F 10-14 O0', 'F 10-14 O1', 'F 15 W0', 'F 15 W1', 'F 15 W2', 'F 15 W3', 'F 15 M0', 'F 15 M1', 'F 15 M2', 'F 15 M3', 'F 15 A0', 'F 15 A1', 'F 15 A2', 'F 15 A3', 'F 15 A4', 'F 15 B0', 'F 15 B1', 'F 15 B2', 'F 15 O0', 'F 15 O1', 'F 16-17 W0', 'F 16-17 W1', 'F 16-17 W2', 'F 16-17 W3', 'F 16-17 M0', 'F 16-17 M1', 'F 16-17 M2', 'F 16-17 M3', 'F 16-17 A0', 'F 16-17 A1', 'F 16-17 A2', 'F 16-17 A3', 'F 16-17 A4', 'F 16-17 B0', 'F 16-17 B1', 'F 16-17 B2', 'F 16-17 O0', 'F 16-17 O1', 'F 18-19 W0', 'F 18-19 W1', 'F 18-19 W2', 'F 18-19 W3', 'F 18-19 M0', 'F 18-19 M1', 'F 18-19 M2', 'F 18-19 M3', 'F 18-19 A0', 'F 18-19 A1', 'F 18-19 A2', 'F 18-19 A3', 'F 18-19 A4', 'F 18-19 B0', 'F 18-19 B1', 'F 18-19 B2', 'F 18-19 O0', 'F 18-19 O1', 'F 20-24 W0', 'F 20-24 W1', 'F 20-24 W2', 'F 20-24 W3', 'F 20-24 M0', 'F 20-24 M1', 'F 20-24 M2', 'F 20-24 M3', 'F 20-24 A0', 'F 20-24 A1', 'F 20-24 A2', 'F 20-24 A3', 'F 20-24 A4', 'F 20-24 B0', 'F 20-24 B1', 'F 20-24 B2', 'F 20-24 O0', 'F 20-24 O1', 'F 25-29 W0', 'F 25-29 W1', 'F 25-29 W2', 'F 25-29 W3', 'F 25-29 M0', 'F 25-29 M1', 'F 25-29 M2', 'F 25-29 M3', 'F 25-29 A0', 'F 25-29 A1', 'F 25-29 A2', 'F 25-29 A3', 'F 25-29 A4', 'F 25-29 B0', 'F 25-29 B1', 'F 25-29 B2', 'F 25-29 O0', 'F 25-29 O1', 'F 30-34 W0', 'F 30-34 W1', 'F 30-34 W2', 'F 30-34 W3', 'F 30-34 M0', 'F 30-34 M1', 'F 30-34 M2', 'F 30-34 M3', 'F 30-34 A0', 'F 30-34 A1', 'F 30-34 A2', 'F 30-34 A3', 'F 30-34 A4', 'F 30-34 B0', 'F 30-34 B1', 'F 30-34 B2', 'F 30-34 O0', 'F 30-34 O1', 'F 35-39 W0', 'F 35-39 W1', 'F 35-39 W2', 'F 35-39 W3', 'F 35-39 M0', 'F 35-39 M1', 'F 35-39 M2', 'F 35-39 M3', 'F 35-39 A0', 'F 35-39 A1', 'F 35-39 A2', 'F 35-39 A3', 'F 35-39 A4', 'F 35-39 B0', 'F 35-39 B1', 'F 35-39 B2', 'F 35-39 O0', 'F 35-39 O1', 'F 40-44 W0', 'F 40-44 W1', 'F 40-44 W2', 'F 40-44 W3', 'F 40-44 M0', 'F 40-44 M1', 'F 40-44 M2', 'F 40-44 M3', 'F 40-44 A0', 'F 40-44 A1', 'F 40-44 A2', 'F 40-44 A3', 'F 40-44 A4', 'F 40-44 B0', 'F 40-44 B1', 'F 40-44 B2', 'F 40-44 O0', 'F 40-44 O1', 'F 45-49 W0', 'F 45-49 W1', 'F 45-49 W2', 'F 45-49 W3', 'F 45-49 M0', 'F 45-49 M1', 'F 45-49 M2', 'F 45-49 M3', 'F 45-49 A0', 'F 45-49 A1', 'F 45-49 A2', 'F 45-49 A3', 'F 45-49 A4', 'F 45-49 B0', 'F 45-49 B1', 'F 45-49 B2', 'F 45-49 O0', 'F 45-49 O1', 'F 50-54 W0', 'F 50-54 W1', 'F 50-54 W2', 'F 50-54 W3', 'F 50-54 M0', 'F 50-54 M1', 'F 50-54 M2', 'F 50-54 M3', 'F 50-54 A0', 'F 50-54 A1', 'F 50-54 A2', 'F 50-54 A3', 'F 50-54 A4', 'F 50-54 B0', 'F 50-54 B1', 'F 50-54 B2', 'F 50-54 O0', 'F 50-54 O1', 'F 55-59 W0', 'F 55-59 W1', 'F 55-59 W2', 'F 55-59 W3', 'F 55-59 M0', 'F 55-59 M1', 'F 55-59 M2', 'F 55-59 M3', 'F 55-59 A0', 'F 55-59 A1', 'F 55-59 A2', 'F 55-59 A3', 'F 55-59 A4', 'F 55-59 B0', 'F 55-59 B1', 'F 55-59 B2', 'F 55-59 O0', 'F 55-59 O1', 'F 60-64 W0', 'F 60-64 W1', 'F 60-64 W2', 'F 60-64 W3', 'F 60-64 M0', 'F 60-64 M1', 'F 60-64 M2', 'F 60-64 M3', 'F 60-64 A0', 'F 60-64 A1', 'F 60-64 A2', 'F 60-64 A3', 'F 60-64 A4', 'F 60-64 B0', 'F 60-64 B1', 'F 60-64 B2', 'F 60-64 O0', 'F 60-64 O1', 'F 65-69 W0', 'F 65-69 W1', 'F 65-69 W2', 'F 65-69 W3', 'F 65-69 M0', 'F 65-69 M1', 'F 65-69 M2', 'F 65-69 M3', 'F 65-69 A0', 'F 65-69 A1', 'F 65-69 A2', 'F 65-69 A3', 'F 65-69 A4', 'F 65-69 B0', 'F 65-69 B1', 'F 65-69 B2', 'F 65-69 O0', 'F 65-69 O1', 'F 70-74 W0', 'F 70-74 W1', 'F 70-74 W2', 'F 70-74 W3', 'F 70-74 M0', 'F 70-74 M1', 'F 70-74 M2', 'F 70-74 M3', 'F 70-74 A0', 'F 70-74 A1', 'F 70-74 A2', 'F 70-74 A3', 'F 70-74 A4', 'F 70-74 B0', 'F 70-74 B1', 'F 70-74 B2', 'F 70-74 O0', 'F 70-74 O1', 'F 75-79 W0', 'F 75-79 W1', 'F 75-79 W2', 'F 75-79 W3', 'F 75-79 M0', 'F 75-79 M1', 'F 75-79 M2', 'F 75-79 M3', 'F 75-79 A0', 'F 75-79 A1', 'F 75-79 A2', 'F 75-79 A3', 'F 75-79 A4', 'F 75-79 B0', 'F 75-79 B1', 'F 75-79 B2', 'F 75-79 O0', 'F 75-79 O1', 'F 80-84 W0', 'F 80-84 W1', 'F 80-84 W2', 'F 80-84 W3', 'F 80-84 M0', 'F 80-84 M1', 'F 80-84 M2', 'F 80-84 M3', 'F 80-84 A0', 'F 80-84 A1', 'F 80-84 A2', 'F 80-84 A3', 'F 80-84 A4', 'F 80-84 B0', 'F 80-84 B1', 'F 80-84 B2', 'F 80-84 O0', 'F 80-84 O1', 'F 85+ W0', 'F 85+ W1', 'F 85+ W2', 'F 85+ W3', 'F 85+ M0', 'F 85+ M1', 'F 85+ M2', 'F 85+ M3', 'F 85+ A0', 'F 85+ A1', 'F 85+ A2', 'F 85+ A3', 'F 85+ A4', 'F 85+ B0', 'F 85+ B1', 'F 85+ B2', 'F 85+ O0', 'F 85+ O1']
         self.SKeys = ['M 24* Single', 'M 24* Married', 'M 24* Partner', 'M 24* Seperated', 'M 24* Divorced', 'M 24* Widowed', 'M 25-34 Single', 'M 25-34 Married', 'M 25-34 Partner', 'M 25-34 Seperated', 'M 25-34 Divorced', 'M 25-34 Widowed', 'M 35-49 Single', 'M 35-49 Married', 'M 35-49 Partner', 'M 35-49 Seperated', 'M 35-49 Divorced', 'M 35-49 Widowed', 'M 50-64 Single', 'M 50-64 Married', 'M 50-64 Partner', 'M 50-64 Seperated', 'M 50-64 Divorced', 'M 50-64 Widowed', 'M 65+ Single', 'M 65+ Married', 'M 65+ Partner', 'M 65+ Seperated', 'M 65+ Divorced', 'M 65+ Widowed', 'F 24* Single', 'F 24* Married', 'F 24* Partner', 'F 24* Seperated', 'F 24* Divorced', 'F 24* Widowed', 'F 25-34 Single', 'F 25-34 Married', 'F 25-34 Partner', 'F 25-34 Seperated', 'F 25-34 Divorced', 'F 25-34 Widowed', 'F 35-49 Single', 'F 35-49 Married', 'F 35-49 Partner', 'F 35-49 Seperated', 'F 35-49 Divorced', 'F 35-49 Widowed', 'F 50-64 Single', 'F 50-64 Married', 'F 50-64 Partner', 'F 50-64 Seperated', 'F 50-64 Divorced', 'F 50-64 Widowed', 'F 65+ Single', 'F 65+ Married', 'F 65+ Partner', 'F 65+ Seperated', 'F 65+ Divorced', 'F 65+ Widowed']
         self.QKeys = ['M 16-24 level1', 'M 16-24 level2', 'M 16-24 apprent', 'M 16-24 level3', 'M 16-24 level4+', 'M 16-24 other', 'M 25-34 no', 'M 25-34 level1', 'M 25-34 level2', 'M 25-34 apprent', 'M 25-34 level3', 'M 25-34 level4+', 'M 25-34 other', 'M 35-49 no', 'M 35-49 level1', 'M 35-49 level2', 'M 35-49 apprent', 'M 35-49 level3', 'M 35-49 level4+', 'M 35-49 other', 'M 50-64 no', 'M 50-64 level1', 'M 50-64 level2', 'M 50-64 apprent', 'M 50-64 level3', 'M 50-64 level4+', 'M 50-64 other', 'M 65+ no', 'M 65+ level1', 'M 65+ level2', 'M 65+ apprent', 'M 65+ level3', 'M 65+ level4+', 'M 65+ other', 'F 16-24 no', 'F 16-24 level1', 'F 16-24 level2', 'F 16-24 apprent', 'F 16-24 level3', 'F 16-24 level4+', 'F 16-24 other', 'F 25-34 no', 'F 25-34 level1', 'F 25-34 level2', 'F 25-34 apprent', 'F 25-34 level3', 'F 25-34 level4+', 'F 25-34 other', 'F 35-49 no', 'F 35-49 level1', 'F 35-49 level2', 'F 35-49 apprent', 'F 35-49 level3', 'F 35-49 level4+', 'F 35-49 other', 'F 50-64 no', 'F 50-64 level1', 'F 50-64 level2', 'F 50-64 apprent', 'F 50-64 level3', 'F 50-64 level4+', 'F 50-64 other', 'F 65+ no', 'F 65+ level1', 'F 65+ level2', 'F 65+ apprent', 'F 65+ level3', 'F 65+ level4+', 'F 65+ other']
-
         self.genes = self.generateAll();
-        self.actual = self.getactual();
-        self.predicted = self.getpredicted();
         self.fitness = self.getFitness();
 
     def generateAll(self):
@@ -48,6 +45,103 @@ class Individual:
             persons.append(person)
         return persons
 
+
+    def getRMSEVector(self, plot=False):
+        rmse = {}
+        actual = {}
+        actual_sex_by_age_by_religion = ICT.getdictionary(ICT.religion_by_sex_by_age)
+        for rkey in self.Rkeys:
+            avalue = actual_sex_by_age_by_religion.get(rkey)
+            actual[rkey] = avalue
+
+        predicted = {}
+        temp = []
+        for gene in self.genes:
+            temp.append(gene.sex + " " + gene.age + " " + gene.religion)
+        predicted_sex_by_age_by_religion = Counter(temp)
+        for rkey in self.Rkeys:
+            pvalue = predicted_sex_by_age_by_religion.get(rkey)
+            if pvalue == None:
+                pvalue = 0
+            predicted[rkey] = pvalue
+
+        rmse['religion'] = self.RMSE(actual, predicted)
+        # if plot==True:
+        #     actual = list(actual.values())
+        #     pred = list(predicted.values())
+        #     n_actual = [float(i) / max(actual) for i in actual]
+        #     n_pred = [float(i) / max(pred) for i in pred]
+        #
+        #     fig = go.Figure()
+        #     fig.add_trace(
+        #         go.Scatter(x0='data', name='actual', y=n_actual, line_color='#636EFA'))
+        #     fig.add_trace(
+        #         go.Scatter(x0='data', name='pred', y=n_pred, line_color='#EF553B'))
+        #     fig.update_layout(width=1000, title='RMSE=' + str(rmse['religion']))
+        #     py.offline.plot(fig, filename="violen.html")
+        #     fig.show()
+
+
+
+        actual = {}
+        actual_sex_by_age_by_ethnic = ICT.getdictionary(ICT.ethnic_by_sex_by_age)
+        for ekey in self.EKeys:
+            avalue = actual_sex_by_age_by_ethnic.get(ekey)
+            actual[ekey] = avalue
+
+        predicted = {}
+        temp = []
+        for gene in self.genes:
+            temp.append(gene.sex + " " + gene.age + " " + gene.ethnicity)
+        predicted_sex_by_age_by_ethnicity = Counter(temp)
+        for ekey in self.EKeys:
+            pvalue = predicted_sex_by_age_by_ethnicity.get(ekey)
+            if pvalue == None:
+                pvalue = 0
+            predicted[ekey] = pvalue
+
+        rmse['ethnicity'] = self.RMSE(actual, predicted)
+
+        actual = {}
+        actual_marital_by_sex_by_age = ICT.getdictionary(ICT.marital_by_sex_by_age)
+        for skey in self.SKeys:
+            avalue = actual_marital_by_sex_by_age.get(skey)
+            actual[skey] = avalue
+        predicted = {}
+        temp = []
+        for gene in self.genes:
+            temp.append(gene.sex + " " + self.agemap(gene.age) + " " + gene.status)
+
+        predicted_marital_by_sex_by_age = Counter(temp)
+        for skey in self.SKeys:
+            pvalue = predicted_marital_by_sex_by_age.get(skey)
+            if pvalue == None:
+                pvalue = 0
+            predicted[skey] = pvalue
+
+        rmse['status'] = self.RMSE(actual, predicted)
+
+        actual = {}
+        actual_qualification_by_sex_by_age = ICT.getdictionary(ICT.qualification_by_sex_by_age)
+        for qkey in self.QKeys:
+            avalue = actual_qualification_by_sex_by_age.get(qkey)
+            actual[qkey] = avalue
+
+        predicted = {}
+        temp = []
+        for gene in self.genes:
+            temp.append(gene.sex + " " + self.agemap2(gene.age) + " " + gene.qualification)
+
+        predicted_qualification_by_sex_by_age = Counter(temp)
+        for qkey in self.QKeys:
+            pvalue = predicted_qualification_by_sex_by_age.get(qkey)
+            if pvalue == None:
+                pvalue = 0
+            predicted[qkey] = pvalue
+
+        rmse['qualification'] = self.RMSE(actual, predicted)
+
+        return rmse
     def getactual(self):
         actual = {}
         actual_sex_by_age_by_religion = ICT.getdictionary(ICT.religion_by_sex_by_age)
@@ -145,21 +239,29 @@ class Individual:
         return predicted
 
     def getFitness(self):
-        return self.RMSE()
+        return self.getRMSEVector()
         # return self.cosine()
 
     def setFitness(self):
         self.fitness = self.getFitness()
 
-    def RMSE(self):
-        # print(self.actual)
-        # print(self.predicted)
-        actual = np.array(list(self.actual.values()))
-        predicted = np.array(list(self.predicted.values()))
+    def RMSE(self, actual, predicted):
+        actual = np.array(list(actual.values()))
+        predicted = np.array(list(predicted.values()))
         # print(any(x is None for x in actual))
         # print(any(x is None for x in predicted))
         rmse = np.sqrt(((predicted - actual) ** 2).mean())
         return rmse
+
+    # def RMSE(self):
+    #     # print(self.actual)
+    #     # print(self.predicted)
+    #     actual = np.array(list(self.actual.values()))
+    #     predicted = np.array(list(self.predicted.values()))
+    #     # print(any(x is None for x in actual))
+    #     # print(any(x is None for x in predicted))
+    #     rmse = np.sqrt(((predicted - actual) ** 2).mean())
+    #     return rmse
     def cosine(self):
         actual = np.array(list(self.actual.values()))
         predicted = np.array(list(self.predicted.values()))
@@ -204,29 +306,25 @@ class Individual:
         py.offline.plot(fig, filename="violen.html")
         fig.show()
 
-    def plot(self):
-        actual = list(self.actual.values())
-        pred = list(self.predicted.values())
-
-        n_actual = [float(i) / max(actual) for i in actual]
-        n_pred = [float(i) / max(pred) for i in pred]
-
-        # n_actual.sort()
-        # n_pred.sort()
-
-        fig = go.Figure()
-        fig.add_trace(
-            go.Scatter(x0='data', name='actual', y=n_actual, line_color='#636EFA'))
-        fig.add_trace(
-            go.Scatter(x0='data', name='pred', y=n_pred, line_color='#EF553B'))
-        fig.update_layout(width=1000, title='RMSE=' + str(self.RMSE()))
-        py.offline.plot(fig, filename="violen.html")
-        fig.show()
+    # def plot(self):
+    #     actual = list(self.actual.values())
+    #     pred = list(self.predicted.values())
+    #
+    #     n_actual = [float(i) / max(actual) for i in actual]
+    #     n_pred = [float(i) / max(pred) for i in pred]
+    #
+    #     # n_actual.sort()
+    #     # n_pred.sort()
+    #
+    #     fig = go.Figure()
+    #     fig.add_trace(
+    #         go.Scatter(x0='data', name='actual', y=n_actual, line_color='#636EFA'))
+    #     fig.add_trace(
+    #         go.Scatter(x0='data', name='pred', y=n_pred, line_color='#EF553B'))
+    #     fig.update_layout(width=1000, title='RMSE=' + str(self.RMSE()))
+    #     py.offline.plot(fig, filename="violen.html")
+    #     fig.show()
 
 
 # ind = Individual()
-# print(ind.getFitness())
-# ind.randomize(1)
-# print(ind.getFitness())
-# # ind.plot()
-
+# print(ind.getRMSEVector())

@@ -84,3 +84,4 @@ marital_by_sex_by_age = marital_by_sex_by_age[marital_by_sex_by_age['geography c
 
 qualification_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age.csv'))
 qualification_by_sex_by_age = qualification_by_sex_by_age[qualification_by_sex_by_age['geography code'] == 'E02005949']
+

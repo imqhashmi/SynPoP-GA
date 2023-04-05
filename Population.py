@@ -33,7 +33,7 @@ class Population:
         fittest = self.individuals[0]
         for i in range (1, self.size):
             nextindividual = self.getIndividual(i)
-            if fittest.fitness >= nextindividual.fitness:
+            if list(fittest.fitness.values()) > list(nextindividual.fitness.values()):
                 fittest = nextindividual
         return fittest
 
