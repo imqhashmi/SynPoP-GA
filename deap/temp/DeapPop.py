@@ -15,6 +15,16 @@ ages = {'0-4': 447, '5-7': 182, '8-9': 132, '10-14': 295, '15': 44, '16-17': 106
 sexes = {'M': 3473, 'F': 3830}
 actual = {'0-4 M': 227, '5-7 M': 102, '8-9 M': 67, '10-14 M': 141, '15 M': 20, '16-17 M': 60, '18-19 M': 270, '20-24 M': 669, '25-29 M': 365, '30-34 M': 311, '35-39 M': 221, '40-44 M': 196, '45-49 M': 147, '50-54 M': 115, '55-59 M': 118, '60-64 M': 109, '65-69 M': 91, '70-74 M': 77, '75-79 M': 49, '80-84 M': 70, '85+ M': 48, '0-4 F': 220, '5-7 F': 80, '8-9 F': 65, '10-14 F': 154, '15 F': 24, '16-17 F': 46, '18-19 F': 381, '20-24 F': 791, '25-29 F': 394, '30-34 F': 306, '35-39 F': 243, '40-44 F': 149, '45-49 F': 153, '50-54 F': 133, '55-59 F': 130, '60-64 F': 123, '65-69 F': 86, '70-74 F': 85, '75-79 F': 78, '80-84 F': 95, '85+ F': 94}
 
+def reduce(dic: dict, percent, Total):
+    for key in dic.keys():
+        dic[key] = round(dic[key]*percent)
+    dic_sum = sum(dic.values())
+    diff = Total - dic_sum
+    for i in range(diff):
+        k = random.choice(list(dic.keys()))
+        dic[k] +=1
+    return dic
+
 def getStats(persons):
     predicted = {}
     temp = []
@@ -47,7 +57,10 @@ def random_person():
     return person
 
 # Define the number of individuals in the population
-Total = 7303
+Total = round(7303 * 0.2)
+ages = reduce(ages, 0.2, Total)
+sexes = reduce(sexes, 0.2, Total)
+actual = reduce(actual, 0.2, Total)
 
 
 # Create individual and population creation methods

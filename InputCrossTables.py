@@ -70,7 +70,11 @@ path = os.path.join(os.path.dirname(os.getcwd()))
 
 sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'sex_by_age_5yrs.csv'))
 sex_by_age = sex_by_age[sex_by_age['geography code'] == 'E02005949']
-
+# d = getdictionary(sex_by_age)
+# for key, value in d.items():
+#     k = key.split(' ')
+#     print("'" + k[1] + " " + k[0]+"':",value,",")
+#
 religion_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'religion_by_sex_by_age.csv'))
 religion_by_sex_by_age = religion_by_sex_by_age[religion_by_sex_by_age['geography code'] == 'E02005949']
 religion_by_sex_by_age = religion_by_sex_by_age.drop(columns=[col for col in religion_by_sex_by_age.columns if 'All' in col])
@@ -85,3 +89,4 @@ marital_by_sex_by_age = marital_by_sex_by_age[marital_by_sex_by_age['geography c
 qualification_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age.csv'))
 qualification_by_sex_by_age = qualification_by_sex_by_age[qualification_by_sex_by_age['geography code'] == 'E02005949']
 
+# print(getdictionary(marital_by_sex_by_age))

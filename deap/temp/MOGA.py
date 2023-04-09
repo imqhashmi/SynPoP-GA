@@ -39,8 +39,8 @@ toolbox.register("select", tools.selNSGA2)
 toolbox.register("evaluate", evaluate)
 
 # Step 6: Run the optimization
-pop_size = 100
-num_generations = 50
+pop_size = 10000
+num_generations = 500
 population = toolbox.population(n=pop_size)
 stats = tools.Statistics(lambda ind: ind.fitness.values)
 stats.register("min", lambda x: round(min(x, default=float('inf'))[0], 2))

@@ -18,6 +18,7 @@ def getdictionary(df):
             if index==0:
                 continue
             dic[column] = int(row[column])
+    # return dict(sorted(dic.items()))
     return dic
 
 def get_weighted_sample(df):
@@ -84,5 +85,3 @@ HHcomdf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'househol
 HHcomdf = HHcomdf.drop(columns=[col for col in HHcomdf.columns if 'Total' in col])
 HHcomdf = HHcomdf[HHcomdf['geography code'] == 'E02005949']
 
-
-print(getdictionary(ethnicdf))

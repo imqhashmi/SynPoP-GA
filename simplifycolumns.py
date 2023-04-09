@@ -122,26 +122,26 @@ path = os.path.join(os.path.dirname(os.getcwd()))
 # religion_by_sex_by_age.to_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'religion_by_sex_by_age2.csv'), index=False)
 
 
-# marital_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age.csv'))
-# marital_by_sex_by_age = marital_by_sex_by_age.rename(columns = {'Sex: All persons; Age: All categories: Age; Marital Status: All categories: Marital and civil partnership status; measures: Value':'total'})
-# marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=[col for col in marital_by_sex_by_age.columns if 'All' in col])
-# marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=['date', 'geography'])
-#
-# columns = list(marital_by_sex_by_age.columns)[2:]
-# updated_columns = ['geography code', 'total']
-# for column in columns:
-#     genders = column.split(";")[0].replace('Sex: Females', 'F').replace('Sex: Males', 'M')
-#     ages = column.split(";")[1].replace(' Age: Age ', '').replace(' and over', '+'). replace(' to ', '-').replace(' and under', '*')
-#     status = column.split(";")[2].replace(' Marital Status: ', '')
-#     status = status.replace('Single (never married or never registered a same-sex civil partnership)','Single')
-#     status = status.replace('In a registered same-sex civil partnership', 'Partner')
-#     status = status.replace('Separated (but still legally married or still legally in a same-sex civil partnership)', 'Seperated')
-#     status = status.replace('Divorced or formerly in a same-sex civil partnership which is now legally dissolved', 'Divorced')
-#     status = status.replace('Widowed or surviving partner from a same-sex civil partnership', 'Widowed')
-#     updated_columns.append(genders + ' ' +  ages +  ' ' + status)
-#
-# marital_by_sex_by_age.columns = updated_columns
-# marital_by_sex_by_age.to_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age2.csv'), index=False)
+marital_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age.csv'))
+marital_by_sex_by_age = marital_by_sex_by_age.rename(columns = {'Age: All categories: Age 16 and over; Sex: All persons; Marital Status: All categories: Marital and civil partnership status; measures: Value':'total'})
+marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=[col for col in marital_by_sex_by_age.columns if 'All' in col])
+marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=['date', 'geography'])
+
+columns = list(marital_by_sex_by_age.columns)[2:]
+updated_columns = ['geography code', 'total']
+for column in columns:
+    ages = column.split(";")[0].replace('Age: Age ', '').replace(' to ', '-').replace(' and over', '+')
+    genders = column.split(";")[1].replace(' Sex: Females', 'F').replace(' Sex: Males', 'M')
+    status = column.split(";")[2].replace(' Marital Status: ', '')
+    status = status.replace('Single (never married or never registered a same-sex civil partnership)','Single')
+    status = status.replace('In a registered same-sex civil partnership', 'Partner')
+    status = status.replace('Separated (but still legally married or still legally in a same-sex civil partnership)', 'Seperated')
+    status = status.replace('Divorced or formerly in a same-sex civil partnership which is now legally dissolved', 'Divorced')
+    status = status.replace('Widowed or surviving partner from a same-sex civil partnership', 'Widowed')
+    updated_columns.append(genders + ' ' +  ages +  ' ' + status)
+
+marital_by_sex_by_age.columns = updated_columns
+marital_by_sex_by_age.to_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age2.csv'), index=False)
 
 # qualification_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age.csv'))
 # qualification_by_sex_by_age = qualification_by_sex_by_age.rename(columns = {'Sex: All persons; Age: All categories: Age 16 and over; Highest Level of Qualification: All categories: Highest level of qualification; measures: Value':'total'})
