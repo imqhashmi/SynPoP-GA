@@ -1,0 +1,11 @@
+Household Composition: One person household: Total; measures: Value,
+Household Composition: One person household: One person aged 65 and over; measures: Value,1E_0C
+Household Composition: One person household: One person aged under 65; measures: Value,1A_0C
+Household Composition: Other households: Total; measures: Value,
+Household Composition: Other households: No adults or one adult and one or more children; measures: Value,1A_1C
+Household Composition: Other households: One adult aged 16 to 64 and one aged 65 and over and no children or two adults aged 65 and over and no children; measures: Value,2E_0C
+Household Composition: Other households: Two adults and one or two children; measures: Value,2A_1C
+Household Composition: Other households: Two adults aged 16 to 64 and no children; measures: Value,2A_0C
+Household Composition: Other households: Two adults and three or more children; measures: Value,2A_3C
+Household Composition: Other households: Three or more adults and one or more children; measures: Value,3A_1C
+Household Composition: Other households: Three or more adults and no children; measures: Value,3A_0C

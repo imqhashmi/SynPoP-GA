@@ -71,3 +71,19 @@ print("Number of non-dominated solutions: ", len(pareto_front))
 print("Best non-dominated solutions:")
 for ind in pareto_front:
     print("Cost:", ind.fitness.values[0], "Weight:", ind.fitness.values[1], "Products:", genotype_to_phenotype(ind))
+
+# import matplotlib.pyplot as plt
+#
+# # Extract the Pareto front from the final population
+# pareto_front = tools.sortNondominated(result, len(result), first_front_only=True)[0]
+#
+# # Extract objective values for each individual in the Pareto front
+# objective1_values = [objective1(ind)[0] for ind in pareto_front]
+# objective2_values = [objective2(ind)[0] for ind in pareto_front]
+#
+# # Plot the Pareto front
+# plt.scatter(objective1_values, objective2_values)
+# plt.xlabel('Objective 1')
+# plt.ylabel('Objective 2')
+# plt.title('Pareto Optimal Front')
+# plt.show()
