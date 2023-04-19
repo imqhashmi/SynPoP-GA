@@ -122,26 +122,26 @@ path = os.path.join(os.path.dirname(os.getcwd()))
 # religion_by_sex_by_age.to_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'religion_by_sex_by_age2.csv'), index=False)
 
 
-marital_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age.csv'))
-marital_by_sex_by_age = marital_by_sex_by_age.rename(columns = {'Age: All categories: Age 16 and over; Sex: All persons; Marital Status: All categories: Marital and civil partnership status; measures: Value':'total'})
-marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=[col for col in marital_by_sex_by_age.columns if 'All' in col])
-marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=['date', 'geography'])
-
-columns = list(marital_by_sex_by_age.columns)[2:]
-updated_columns = ['geography code', 'total']
-for column in columns:
-    ages = column.split(";")[0].replace('Age: Age ', '').replace(' to ', '-').replace(' and over', '+')
-    genders = column.split(";")[1].replace(' Sex: Females', 'F').replace(' Sex: Males', 'M')
-    status = column.split(";")[2].replace(' Marital Status: ', '')
-    status = status.replace('Single (never married or never registered a same-sex civil partnership)','Single')
-    status = status.replace('In a registered same-sex civil partnership', 'Partner')
-    status = status.replace('Separated (but still legally married or still legally in a same-sex civil partnership)', 'Seperated')
-    status = status.replace('Divorced or formerly in a same-sex civil partnership which is now legally dissolved', 'Divorced')
-    status = status.replace('Widowed or surviving partner from a same-sex civil partnership', 'Widowed')
-    updated_columns.append(genders + ' ' +  ages +  ' ' + status)
-
-marital_by_sex_by_age.columns = updated_columns
-marital_by_sex_by_age.to_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age2.csv'), index=False)
+# marital_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age.csv'))
+# marital_by_sex_by_age = marital_by_sex_by_age.rename(columns = {'Age: All categories: Age 16 and over; Sex: All persons; Marital Status: All categories: Marital and civil partnership status; measures: Value':'total'})
+# marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=[col for col in marital_by_sex_by_age.columns if 'All' in col])
+# marital_by_sex_by_age = marital_by_sex_by_age.drop(columns=['date', 'geography'])
+#
+# columns = list(marital_by_sex_by_age.columns)[2:]
+# updated_columns = ['geography code', 'total']
+# for column in columns:
+#     ages = column.split(";")[0].replace('Age: Age ', '').replace(' to ', '-').replace(' and over', '+')
+#     genders = column.split(";")[1].replace(' Sex: Females', 'F').replace(' Sex: Males', 'M')
+#     status = column.split(";")[2].replace(' Marital Status: ', '')
+#     status = status.replace('Single (never married or never registered a same-sex civil partnership)','Single')
+#     status = status.replace('In a registered same-sex civil partnership', 'Partner')
+#     status = status.replace('Separated (but still legally married or still legally in a same-sex civil partnership)', 'Seperated')
+#     status = status.replace('Divorced or formerly in a same-sex civil partnership which is now legally dissolved', 'Divorced')
+#     status = status.replace('Widowed or surviving partner from a same-sex civil partnership', 'Widowed')
+#     updated_columns.append(genders + ' ' +  ages +  ' ' + status)
+#
+# marital_by_sex_by_age.columns = updated_columns
+# marital_by_sex_by_age.to_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'marital_by_sex_by_age2.csv'), index=False)
 
 # qualification_by_sex_by_age = pd.read_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age.csv'))
 # qualification_by_sex_by_age = qualification_by_sex_by_age.rename(columns = {'Sex: All persons; Age: All categories: Age 16 and over; Highest Level of Qualification: All categories: Highest level of qualification; measures: Value':'total'})
@@ -164,3 +164,38 @@ marital_by_sex_by_age.to_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'c
 #
 # qualification_by_sex_by_age.columns = updated_columns
 # qualification_by_sex_by_age.to_csv(os.path.join(path, 'NOMIS', 'Census_2011_MSOA', 'crosstables', 'qualification_by_sex_by_age2.csv'), index=False)
+
+HH_composition_by_sex_by_age = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'HH_composition_by_sex_by_age.csv'))
+HH_composition_by_sex_by_age = HH_composition_by_sex_by_age.rename(columns = {'Sex: All persons; Age: All categories: Age; Household Composition: All categories: Household composition; measures: Value':'total'})
+HH_composition_by_sex_by_age = HH_composition_by_sex_by_age.drop(columns=[col for col in HH_composition_by_sex_by_age.columns if 'All persons' in col])
+HH_composition_by_sex_by_age = HH_composition_by_sex_by_age.drop(columns=[col for col in HH_composition_by_sex_by_age.columns if 'All categories' in col])
+HH_composition_by_sex_by_age = HH_composition_by_sex_by_age.drop(columns=[col for col in HH_composition_by_sex_by_age.columns if 'Total' in col])
+HH_composition_by_sex_by_age = HH_composition_by_sex_by_age.drop(columns=['date', 'geography'])
+columns = list(HH_composition_by_sex_by_age.columns)[2:]
+updated_columns = ['geography code', 'total']
+for column in columns:
+    genders = column.split(";")[0].replace('Sex: Females', 'F').replace('Sex: Males', 'M')
+    ages = column.split(";")[1].replace(' Age: Age ', '').replace(' and over', '+'). replace(' to ', '-').replace(' and under', '*')
+    composition = column.split(";")[2]
+    # print(genders + ' ' +  ages +  ' ' + composition)
+    composition = composition.replace(' Household Composition: One person household: Aged 65 and over', '1E_0C')
+    composition = composition.replace(' Household Composition: One person household: Other', '1A_0C')
+    composition = composition.replace(' Household Composition: One family only: All aged 65 and over', '2E_0C')
+    composition = composition.replace(' Household Composition: One family only: Married or same-sex civil partnership couple: No children', '2A_0C_a')
+    composition = composition.replace(' Household Composition: One family only: Married or same-sex civil partnership couple: Dependent children', '2A_1C_a')
+    composition = composition.replace(' Household Composition: One family only: Married or same-sex civil partnership couple: All children non-dependent', '2A_3C_a')
+    composition = composition.replace(' Household Composition: One family only: Cohabiting couple: No children', '2A_0C_b')
+    composition = composition.replace(' Household Composition: One family only: Cohabiting couple: Dependent children', '2A_1C_b')
+    composition = composition.replace(' Household Composition: One family only: Cohabiting couple: All children non-dependent', '2A_3C_b')
+    composition = composition.replace(' Household Composition: One family only: Lone parent: Dependent children', '1A_1C_a')
+    composition = composition.replace(' Household Composition: One family only: Lone parent: All children non-dependent', '1A_1C_b')
+    composition = composition.replace(' Household Composition: Other household types: With dependent children', '3A_1C')
+    composition = composition.replace(' Household Composition: Other household types: Other (including all full-time students and all aged 65 and over)', '3A_0C')
+    print(composition)
+    # updated_columns.append(genders + ' ' +  ages +  ' ' + composition)
+
+# HH_composition_by_sex_by_age.columns = updated_columns
+
+# HH_composition_by_sex_by_age.to_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'crosstables', 'HH_composition_by_sex_by_age2.csv'), index=False)
+
+

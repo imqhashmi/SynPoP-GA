@@ -78,10 +78,12 @@ qualdf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'individua
 qualdf = qualdf[qualdf['geography code'] == 'E02005949']
 
 
-HHsizedf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'household', 'Householdsize.csv'))
+HHsizedf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'individual', 'HH_size.csv'))
 HHsizedf = HHsizedf[HHsizedf['geography code'] == 'E02005949']
 
-HHcomdf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'household', 'HouseholdComposition.csv'))
-HHcomdf = HHcomdf.drop(columns=[col for col in HHcomdf.columns if 'Total' in col])
+HHcomdf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'individual', 'HH_composition.csv'))
 HHcomdf = HHcomdf[HHcomdf['geography code'] == 'E02005949']
+
+HHtypedf = pd.read_csv(os.path.join(path, 'SPONGE', 'Census_2011_MSOA', 'individual', 'HH_type.csv'))
+HHtypedf = HHtypedf[HHtypedf['geography code'] == 'E02005949']
 
